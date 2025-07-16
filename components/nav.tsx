@@ -15,7 +15,7 @@ export default function Nav() {
         <div className="flex items-center gap-8">
           <div className="hidden md:flex items-center gap-8 text-gray-600">
             <a
-              href="https://listerr.networks.com"
+              href="https://listerr.network"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-600 transition-colors"
