@@ -1,146 +1,373 @@
-import Nav from "@/components/nav"
-import VideoSection from "@/components/video-section"
-import ManifestoSection from "@/components/manifesto-section"
-import SignatureSection from "@/components/signature-section"
-import Footer from "@/components/footer"
+import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import {
+  ArrowRight,
+  BarChart3,
+  Bot,
+  CheckCircle2,
+  Languages,
+  MessageSquareText,
+  PackageCheck,
+  PlaySquare,
+  ShoppingBag,
+  Sparkles,
+  Store,
+  Trophy,
+} from "lucide-react"
+
+import {
+  CTABand,
+  FeatureGrid,
+  Hero,
+  MetricsStrip,
+  PlatformCard,
+  PricingCard,
+  SectionContainer,
+} from "@/components/primitives"
+import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "India's Most Complete Commerce Engagement Platform",
+  description:
+    "Stories, Reels, AI Ordering, and Smart Flows in one platform built for Indian brands.",
+}
+
+const useCases = [
+  {
+    title: "Stories",
+    description: "Shoppable web and app Stories that keep buyers moving.",
+    stat: "2.4x CVR",
+    icon: PlaySquare,
+    href: "/use-cases/stories",
+  },
+  {
+    title: "Reels",
+    description: "Short video commerce for launches, drops, and campaigns.",
+    stat: "+58% engagement",
+    icon: PlaySquare,
+    href: "/use-cases/reels",
+  },
+  {
+    title: "Lists",
+    description: "Audience lists that turn behavior into repeat purchase flows.",
+    stat: "3-5x opt-ins",
+    icon: CheckCircle2,
+    href: "/use-cases/customer-lists",
+  },
+  {
+    title: "Gamification",
+    description: "Streaks, rewards, challenges, and commerce moments.",
+    stat: "4.1x repeat rate",
+    icon: Trophy,
+    href: "/use-cases/gamification",
+  },
+  {
+    title: "AI Personalisation",
+    description: "Product and content paths adapted to each shopper.",
+    stat: "12+ languages",
+    icon: Sparkles,
+    href: "/use-cases/ai-personalisation",
+  },
+  {
+    title: "Smart Flows",
+    description: "Lifecycle journeys connected to ads, CRM, and store events.",
+    stat: "40% fewer waste campaigns",
+    icon: BarChart3,
+    href: "/use-cases/smart-flows",
+  },
+]
+
+const integrations = [
+  "Shopify",
+  "WooCommerce",
+  "Razorpay",
+  "Meta Ads",
+  "Google Ads",
+  "WhatsApp",
+  "MoEngage",
+  "Clevertap",
+  "WebEngage",
+  "Segment",
+  "GA4",
+  "WordPress",
+]
+
+const industries = [
+  ["E-Commerce", "2.4x homepage CVR", "/industries/ecommerce"],
+  ["EdTech", "40% Day-7 retention lift", "/industries/edtech"],
+  ["FinTech", "More assisted applications", "/industries/fintech"],
+  ["Media & OTT", "Higher content recirculation", "/industries/media-ott"],
+  ["Food & Delivery", "Repeat ordering moments", "/industries/food-delivery"],
+  ["Travel", "Better package discovery", "/industries/travel"],
+]
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Nav />
-
-      <section className="relative pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-20 px-4">
-        <div className="container mx-auto max-w-7xl">
-          {/* Mobile layout (stacked) */}
-          <div className="block md:hidden mb-12">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold mb-6">
-                <span className="text-gray-900">Smarter Commerce, Stronger Connections</span>
-                <br />
-                <span className="text-primary-600">Powered by AI</span>
-              </h1>
-
-              <p className="text-lg text-gray-600 mb-8">
-                An AI-powered commerce network using Generative AI and social commerce to attract consumers via Google
-                My Business.
-              </p>
-            </div>
-
-            {/* Mobile devices showcase (centered) */}
-            <div className="relative mx-auto max-w-sm h-[500px] mb-8">
-              {/* Desktop preview (smaller on mobile) */}
-              <div className="relative w-full h-[250px] mb-4">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Desktop%20-%2011%20(1)-FGIEN8Ya9OKWw3D1OmYZukawlQnVof.png"
-                  alt="Listerr Marketplace Interface"
-                  fill
-                  className="object-cover rounded-xl shadow-lg border border-gray-200"
-                  priority
-                />
+    <>
+      <Hero
+        title="India's Most Complete Commerce Engagement Platform"
+        description="Stories, Reels, AI Ordering, and Smart Flows — all in one platform, built for Indian brands."
+        primaryCta={{ label: "Start Free Trial", href: "/signup" }}
+        secondaryCta={{ label: "See All Products", href: "/platform" }}
+      >
+        <div className="relative mx-auto max-w-xl">
+          <div className="rounded-2xl border border-border bg-white p-4 shadow-xl">
+            <div className="rounded-xl bg-surface-sunken p-4">
+              <div className="grid gap-3">
+                {[
+                  ["Stories live", "₹18.4Cr attributed GMV", "bg-brand-listerr-600"],
+                  ["AI order captured", "WhatsApp checkout ready", "bg-ai-bg"],
+                  ["Creator reel synced", "Meta audience refreshed", "bg-brand-network-600"],
+                ].map(([title, subtitle, color]) => (
+                  <div key={title} className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm">
+                    <span className={`h-12 w-12 rounded-lg ${color}`} />
+                    <span>
+                      <span className="block font-bold text-fg">{title}</span>
+                      <span className="text-sm text-fg-muted">{subtitle}</span>
+                    </span>
+                  </div>
+                ))}
               </div>
-
-              {/* Mobile preview (centered on mobile) */}
-              <div className="relative mx-auto w-[220px] h-[440px]">
-                <div className="absolute inset-0 bg-gray-900 rounded-[32px] z-10"></div>
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Android%20-%20174-fF6xuqHVpXq2gUqCVFu74EdTVHZfh6.png"
-                  alt="Listerr Mobile App"
-                  fill
-                  className="object-cover relative z-20 rounded-[28px] border-[6px] border-gray-900"
-                  priority
-                />
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-30"></div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/seller"
-                className="bg-white border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-full hover:bg-gray-900 hover:text-white transition-colors text-center"
-              >
-                See Seller Dashboard
-              </Link>
-              <Link
-                href="/access"
-                className="bg-primary-600 text-white px-6 py-3 rounded-full hover:bg-primary-700 transition-colors text-center"
-              >
-                GET EARLY ACCESS
-              </Link>
             </div>
           </div>
-
-          {/* Tablet and Desktop layout (side by side) */}
-          <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl xl:text-7xl font-bold mb-6 lg:mb-8">
-                <span className="text-gray-900">Smarter Commerce, Stronger Connections</span>
-                <br />
-                <span className="text-primary-600">Powered by AI</span>
-              </h1>
-
-              <p className="text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-3xl mb-8 lg:mb-12">
-                An AI-powered commerce network using Generative AI and social commerce to attract consumers via Google
-                My Business.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/seller"
-                  className="bg-white border-2 border-gray-900 text-gray-900 px-6 lg:px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition-colors inline-block"
-                >
-                  See Seller Dashboard
-                </Link>
-                <Link
-                  href="/access"
-                  className="bg-primary-600 text-white px-6 lg:px-8 py-3 rounded-full hover:bg-primary-700 transition-colors inline-block"
-                >
-                  GET EARLY ACCESS
-                </Link>
-              </div>
+          <div className="absolute -bottom-8 -right-4 hidden w-44 rounded-[28px] border-8 border-fg bg-white p-3 shadow-xl md:block">
+            <div className="space-y-2">
+              <div className="h-20 rounded-xl bg-brand-storyboard-100" />
+              <div className="h-3 rounded-full bg-fg" />
+              <div className="h-3 w-2/3 rounded-full bg-fg-subtle" />
+              <Button variant="listerr" size="sm" className="mt-3 w-full">
+                Shop now
+              </Button>
             </div>
+          </div>
+        </div>
+      </Hero>
 
-            <div className="relative">
-              {/* Desktop View */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Desktop%20-%2011%20(1)-FGIEN8Ya9OKWw3D1OmYZukawlQnVof.png"
-                  alt="Listerr Marketplace Interface"
-                  width={1200}
-                  height={800}
-                  className="rounded-2xl shadow-2xl border border-gray-200"
-                  priority
-                />
-              </div>
+      <SectionContainer className="py-8 md:py-10">
+        <MetricsStrip
+          metrics={[
+            { value: "200+", label: "Brands" },
+            { value: "₹500Cr+", label: "Attributed GMV" },
+            { value: "2Bn+", label: "Story Views" },
+            { value: "12+", label: "Indian Languages" },
+          ]}
+        />
+      </SectionContainer>
 
-              {/* Mobile View - Adjust position based on screen size */}
-              <div className="absolute -right-8 lg:-right-16 top-1/2 -translate-y-1/2 w-[200px] md:w-[220px] lg:w-[280px] h-[400px] md:h-[440px] lg:h-[560px] z-20">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 bg-gray-900 rounded-[32px] md:rounded-[36px] lg:rounded-[40px] z-10"></div>
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Android%20-%20174-fF6xuqHVpXq2gUqCVFu74EdTVHZfh6.png"
-                    alt="Listerr Mobile App"
-                    fill
-                    className="object-cover relative z-20 rounded-[28px] md:rounded-[30px] lg:rounded-[32px] border-[6px] md:border-[7px] lg:border-[8px] border-gray-900"
-                    priority
-                  />
-                  {/* Phone Frame Details */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 md:w-24 lg:w-32 h-4 md:h-5 lg:h-6 bg-gray-900 rounded-b-xl lg:rounded-b-2xl z-30"></div>
+      <SectionContainer>
+        <div className="mb-10 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-listerr-700">
+            Four platforms
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold text-fg md:text-5xl">
+            One commerce engagement stack.
+          </h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <PlatformCard brand="listerr" />
+          <PlatformCard brand="seller" />
+          <PlatformCard brand="network" />
+          <PlatformCard brand="storyboard" />
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="bg-surface-raised">
+        <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-listerr-700">
+              Use cases
+            </p>
+            <h2 className="mt-3 text-3xl font-extrabold text-fg md:text-5xl">
+              Build the moments that convert.
+            </h2>
+          </div>
+          <Button asChild variant="outline">
+            <Link href="/use-cases/stories">Explore use cases</Link>
+          </Button>
+        </div>
+        <FeatureGrid
+          items={useCases.map((item) => ({
+            title: `${item.title} · ${item.stat}`,
+            description: item.description,
+            icon: item.icon,
+            brand: "listerr",
+          }))}
+        />
+      </SectionContainer>
+
+      <section className="bg-ai-bg py-20 text-ai-fg md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:px-8">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-ai-accent">
+              Listerr AI
+            </p>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Introducing Listerr AI — Commerce That Talks, Listens, and Sells
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/75">
+              Voice, text, and intelligent order management — built for Indian
+              languages and Indian commerce.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {["AI Calling", "Text Ordering", "Voice Ordering", "Listerr Order", "AI Cataloging"].map((pill) => (
+                <span key={pill} className="rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/84">
+                  {pill}
+                </span>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild variant="ai" size="xl">
+                <Link href="/ai/ai-calling">Explore Listerr AI</Link>
+              </Button>
+              <Button asChild variant="outline" size="xl" className="border-white/25 bg-transparent text-white hover:bg-white/10">
+                <Link href="/contact">Book AI Demo</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-ai-surface p-5 shadow-xl">
+            <div className="rounded-xl bg-ai-bg p-5">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-ai-accent text-ai-bg">
+                  <Bot className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-bold">AI call transcription</p>
+                  <p className="text-sm text-white/60">Hindi, English, Hinglish</p>
                 </div>
+              </div>
+              <div className="space-y-3 text-sm">
+                <p className="rounded-lg bg-white/8 p-3 text-white/80">
+                  Customer asked for size M kurta in blue.
+                </p>
+                <p className="ml-8 rounded-lg bg-ai-accent p-3 font-semibold text-ai-bg">
+                  Matched SKU, confirmed COD, order ready.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-400 via-primary-500 to-blue-600" />
       </section>
 
-      <VideoSection />
-      <ManifestoSection />
-      <SignatureSection />
-      <Footer />
-    </main>
+      <SectionContainer className="bg-brand-seller-50">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1fr] lg:items-center">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-seller-700">
+              Shopify Growth
+            </p>
+            <h2 className="mt-3 text-3xl font-extrabold text-fg md:text-5xl">
+              Listerr + Shopify: Add Stories. Take AI Orders. Sync Meta Ads.
+            </h2>
+            <div className="mt-7 grid gap-3 text-fg-muted">
+              {["One-click install", "Shoppable storefront Stories", "Meta Ads loop"].map((item) => (
+                <p key={item} className="flex items-center gap-3">
+                  <PackageCheck className="h-5 w-5 text-brand-seller-700" />
+                  {item}
+                </p>
+              ))}
+            </div>
+            <Button asChild variant="seller" size="xl" className="mt-8">
+              <Link href="/use-cases/shopify">Get the Shopify App</Link>
+            </Button>
+          </div>
+          <div className="rounded-2xl border border-brand-seller-100 bg-white p-5 shadow-xl">
+            <div className="grid gap-4 rounded-xl bg-surface-sunken p-4 sm:grid-cols-3">
+              {["2.4x homepage CVR", "3-5x more lead opt-ins", "40% fewer ROAS-negative campaigns"].map((stat) => (
+                <div key={stat} className="rounded-lg bg-white p-4 text-lg font-extrabold text-fg shadow-sm">
+                  {stat}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="rounded-2xl border border-border bg-white p-8 shadow-md">
+            <p className="text-sm font-bold text-brand-listerr-700">Featured case study</p>
+            <blockquote className="mt-4 text-2xl font-extrabold leading-tight text-fg">
+              “Listerr helped our team turn storefront traffic into repeat buyers.”
+            </blockquote>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {["+58% engagement", "2.3x CVR", "4.1x repeat rate"].map((metric) => (
+                <p key={metric} className="rounded-lg bg-brand-listerr-50 p-3 text-sm font-bold text-brand-listerr-700">
+                  {metric}
+                </p>
+              ))}
+            </div>
+            <Link href="/case-studies" className="mt-6 inline-flex items-center gap-2 font-bold text-brand-listerr-700">
+              Read the full story <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-3xl font-extrabold text-fg md:text-5xl">
+              Connect the tools commerce teams already use.
+            </h2>
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {integrations.map((integration) => (
+                <div key={integration} className="rounded-lg border border-border bg-white p-4 text-sm font-bold text-fg shadow-sm">
+                  {integration}
+                </div>
+              ))}
+            </div>
+            <Link href="/integrations" className="mt-6 inline-flex items-center gap-2 font-bold text-brand-listerr-700">
+              View all integrations <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="bg-surface-raised">
+        <div className="mb-8 flex items-center gap-3">
+          <Store className="h-7 w-7 text-brand-listerr-700" />
+          <h2 className="text-3xl font-extrabold text-fg md:text-5xl">
+            Built for Indian growth sectors.
+          </h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {industries.map(([name, stat, href]) => (
+            <Link key={href} href={href} className="rounded-xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <Languages className="h-5 w-5 text-brand-listerr-700" />
+              <p className="mt-4 text-lg font-bold text-fg">{name}</p>
+              <p className="mt-2 text-sm text-fg-muted">{stat}</p>
+            </Link>
+          ))}
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="mb-10 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-listerr-700">
+            Pricing
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold text-fg md:text-5xl">
+            Start lean, scale when the commerce loop proves itself.
+          </h2>
+        </div>
+        <div className="grid gap-5 lg:grid-cols-3">
+          <PricingCard
+            name="Starter"
+            price="₹12k/mo"
+            description="For early brands launching shoppable engagement."
+            features={["Stories and Reels", "Basic analytics", "Email support"]}
+          />
+          <PricingCard
+            name="Growth"
+            price="₹35k/mo"
+            description="For teams scaling lifecycle engagement and ads loops."
+            features={["Smart Flows", "Meta sync", "Priority support"]}
+            popular
+          />
+          <PricingCard
+            name="Scale"
+            price="Custom"
+            description="For larger commerce teams with AI and network needs."
+            features={["Listerr AI add-ons", "Custom integrations", "Success manager"]}
+          />
+        </div>
+      </SectionContainer>
+
+      <CTABand />
+    </>
   )
 }

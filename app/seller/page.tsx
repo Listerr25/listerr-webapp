@@ -1,7 +1,7 @@
 "use client"
 
-import Nav from "@/components/nav"
-import Footer from "@/components/footer"
+import Footer from "@/components/legacy/footer"
+import Nav from "@/components/legacy/nav"
 import Image from "next/image"
 
 export default function SellerPage() {

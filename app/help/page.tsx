@@ -1,5 +1,5 @@
-import Nav from "@/components/nav"
-import Footer from "@/components/footer"
+import Footer from "@/components/legacy/footer"
+import Nav from "@/components/legacy/nav"
 import {
   Search,
   MessageCircle,

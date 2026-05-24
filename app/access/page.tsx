@@ -1,6 +1,6 @@
-import Nav from "@/components/nav"
-import Footer from "@/components/footer"
-import AccessForm from "@/components/access-form"
+import AccessForm from "@/components/legacy/access-form"
+import Footer from "@/components/legacy/footer"
+import Nav from "@/components/legacy/nav"
 import { CheckCircle } from "lucide-react"
 
 export default function AccessPage() {
