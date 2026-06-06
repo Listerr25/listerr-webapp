@@ -1266,8 +1266,8 @@ export default function HomePageClient() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:grid-cols-2 md:px-6 lg:grid-cols-4 lg:gap-8 lg:px-8">
           {[
             { value: 200, suffix: "+", label: "Brands Trust Us" },
-            { value: 500, prefix: "₹", suffix: "Cr+", label: "Attributed GMV" },
-            { value: 2, suffix: "Bn+", label: "Story Views Served" },
+            { value: 50, prefix: "₹", suffix: "Cr+", label: "Attributed GMV" },
+            { value: 2, suffix: "M+", label: "Story Views Served" },
             { value: 12, suffix: "+", label: "Indian Languages" },
           ].map((m) => (
             <div key={m.label} className="relative text-center lg:text-left">
