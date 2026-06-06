@@ -55,8 +55,8 @@ export default function PrimitiveGallery() {
         <MetricsStrip
           metrics={[
             { value: "200+", label: "Active brands" },
-            { value: "₹500Cr+", label: "Attributed GMV" },
-            { value: "2Bn+", label: "Story views" },
+            { value: "₹50Cr+", label: "Attributed GMV" },
+            { value: "2M+", label: "Story views" },
             { value: "12+", label: "Languages" },
           ]}
         />

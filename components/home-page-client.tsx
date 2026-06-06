@@ -203,8 +203,8 @@ function HeroMockup() {
           <div className="mt-5 grid grid-cols-3 gap-3">
             {[
               ["2.4x", "CVR"],
-              ["₹500Cr", "GMV"],
-              ["2Bn", "Views"],
+              ["₹50Cr", "GMV"],
+              ["2M", "Views"],
             ].map(([val, label]) => (
               <div key={label} className="rounded-lg bg-white p-3 text-center shadow-sm">
                 <p className="text-lg font-extrabold text-fg">{val}</p>
