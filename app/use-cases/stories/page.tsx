@@ -47,7 +47,7 @@ export default function StoriesUseCasePage() {
         { value: "2.4x", label: "Homepage CVR" },
         { value: "+58%", label: "Engagement" },
         { value: "40%", label: "Lower wasted ROAS" },
-        { value: "2Bn+", label: "Story views delivered" },
+        { value: "2M+", label: "Story views delivered" },
       ]}
       funnel={["Discovery", "Consideration", "Conversion", "Repeat purchase"]}
     />
