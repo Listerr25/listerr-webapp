@@ -1,5 +1,23 @@
-import Nav from "@/components/nav"
-import Footer from "@/components/footer"
+import type { Metadata } from "next"
+import Footer from "@/components/legacy/footer"
+import Nav from "@/components/legacy/nav"
+
+export const metadata: Metadata = {
+  title: "Help Center",
+  description: "Search guides, video tutorials, and contact Listerr support — chat, email, and phone.",
+  alternates: { canonical: "/help" },
+  openGraph: {
+    url: "/help",
+    title: "Help Center",
+    description: "Search guides, video tutorials, and contact Listerr support — chat, email, and phone.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Help Center",
+    description: "Search guides, video tutorials, and contact Listerr support — chat, email, and phone.",
+  },
+}
+
 import {
   Search,
   MessageCircle,

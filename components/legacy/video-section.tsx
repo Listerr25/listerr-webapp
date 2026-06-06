@@ -1,6 +1,7 @@
 "use client"
 
 import { Play, X } from "lucide-react"
+import Image from "next/image"
 import { useState } from "react"
 
 export default function VideoSection() {
@@ -26,10 +27,12 @@ export default function VideoSection() {
           onMouseLeave={() => setIsHovered(false)}
           onClick={handlePlayVideo}
         >
-          <img
+          <Image
             src="/images/video-thumbnail.png"
             alt="Share your brand Story with Listerr"
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 896px"
+            className="object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
             <button

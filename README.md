@@ -1,121 +1,111 @@
-# Listerr
+# Listerr Webapp
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+Marketing and product website for **Listerr**, India's commerce engagement platform.
 
-**Listerr** is a Commerce Network Platform that helps offline MSME sellers and online merchants unify their product listings, enrich them with AI, and distribute to Google My Business, ONDC, and other channels from a single dashboard.
+The app is built with Next.js App Router and implements the execution plan in
+`execution-plan/`: homepage, pricing, platforms, use cases, Listerr AI, industries,
+resources, company pages, legal pages, sitemap, and robots.
 
----
+## Tech Stack
 
-## 🚀 Key Features
+- Next.js 15 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 3
+- shadcn/ui + Radix primitives
+- Lucide React icons
+- Plus Jakarta Sans via `next/font`
 
-* **Seller Integration**
+## Quick Start
 
-  * Sync or bulk-upload products via CSV or API
-  * Manage inventory and pricing in one place
-* **GenAI Enrichment**
+```bash
+npm install
+npm run dev
+```
 
-  * Automated product description generation
-  * Smart categorization and tagging
-  * AI-powered promotional copy
-* **Multi-Channel Distribution**
+Open `http://localhost:3000`.
 
-  * Push listings to Google My Business (GMB)
-  * Publish on ONDC (Open Network for Digital Commerce)
-  * Custom channel connectors (e.g., social media)
-* **Analytics & Insights**
+## Verification
 
-  * Performance dashboards across all channels
-  * Sales, clicks, and engagement metrics
-  * AI-driven optimization recommendations
+```bash
+npm run typecheck
+npm run build
+npm run check
+```
 
----
+Notes:
 
-## 💻 Tech Stack
+- `npm run build` currently skips Next's built-in type and lint validation because
+  `next.config.mjs` has those flags enabled.
+- `npm run typecheck` is the explicit TypeScript verification step.
+- `npm run lint` is still the legacy Next lint command and prompts for setup in this repo.
 
-* **Frontend**: Next.js, React, Tailwind CSS
-* **Backend**: Node.js, Express, PostgreSQL
-* **AI Services**: OpenAI GPT-4, Custom ML Models
-* **Cloud & Hosting**: Vercel (frontend), AWS (API, storage)
-* **Integrations**: Google My Business API, ONDC API
+## Project Structure
 
----
+```text
+app/                    Next.js routes, metadata, sitemap, robots
+components/site/        Current global shell: nav, mobile nav, footer, breadcrumbs
+components/primitives/  Reusable marketing section primitives
+components/marketing/   Generic marketing page templates
+components/platform/    Platform page template
+components/use-cases/   Use-case page template
+components/ai/          Listerr AI page template
+components/industry/    Industry page template
+components/pricing/     Pricing page client UI
+components/ui/          shadcn/ui primitives
+components/legacy/      Older compatibility components used by /access, /seller, /help
+lib/                    Shared data, brand tokens, pricing, utilities
+design-system/          Design source material
+execution-plan/         Implementation plan and blueprint mapping
+docs/                   Project maintenance docs
+public/                 Static assets
+```
 
-## 🔧 Installation
+More detail: [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md).
 
-1. **Clone the repository**
+## Route Coverage
 
-   ```bash
-   git clone https://github.com/Listerr25/listerr-webapp.git
-   cd listerr-webapp
-   ```
+The site has implemented route coverage across:
 
-2. **Install dependencies**
+- Phase 1: homepage, pricing, P0 platforms, P0 use cases, P0 AI, privacy, terms
+- Phase 2: platform depth, remaining P1 use cases and AI, industries, resources, company, vs Storyly
+- Phase 3: changelog, careers, press kit, P2 platform pages, P2 industries
 
-   ```bash
-   npm install --legacy-peer-deps
-   ```
+Sitemap and robots are implemented in:
 
-3. **Environment Variables**
-   Create a `.env.local` file in the project root with:
+- `app/sitemap.ts`
+- `app/robots.ts`
 
-   ```dotenv
-   NEXT_PUBLIC_API_URL=https://api.listerr.in
-   OPENAI_API_KEY=your-openai-key
-   GMB_CLIENT_ID=your-gmb-client-id
-   GMB_CLIENT_SECRET=your-gmb-client-secret
-   ONDC_API_KEY=your-ondc-api-key
-   DATABASE_URL=your-postgres-connection
-   ```
+## Key Source Files
 
-4. **Run in development**
+- `app/layout.tsx`: global shell, font, metadata defaults
+- `app/page.tsx`: homepage
+- `lib/brand.ts`: multi-brand platform mapping
+- `lib/pricing.ts`: pricing plans, comparison matrix, AI add-ons, FAQs
+- `lib/comparison/storyly.ts`: Storyly comparison matrix
+- `tailwind.config.js`: Listerr brand and semantic tokens
+- `app/globals.css`: global base styles and accessibility defaults
 
-   ```bash
-   npm run dev
-   ```
+## Current Gaps
 
-5. **Build for production**
+These are intentionally left for production hardening:
 
-   ```bash
-   npm run build
-   npm start
-   ```
+- ESLint setup
+- Real form backend for contact, demo, network apply, newsletter
+- Cookie-consent-gated GA4 and Meta Pixel
+- Dynamic OG image route
+- Full MDX/RSS pipeline for blog, docs, and case studies
+- Real image/media assets replacing placeholders
 
----
+## Deployment
 
-## 🔗 Deployment
+Target deployment is Vercel.
 
-* **Frontend**: Automatically deployed on Vercel via GitHub integration.
-* **Backend**: Hosted on AWS Elastic Beanstalk / EC2 behind API Gateway.
-* **Database**: AWS RDS (PostgreSQL).
+Recommended production checks before deploy:
 
----
+```bash
+npm run check
+npm audit
+```
 
-## 📖 Usage
-
-1. Sign in with Google or email/password.
-2. Connect your Google My Business account.
-3. Upload or sync your product catalog.
-4. Configure AI enrichment settings (tags, description tone).
-5. Publish to channels and monitor analytics.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repo
-2. Create a new branch: `git checkout -b feature/YourFeature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to branch: `git push origin feature/YourFeature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-> Built with ❤️ by the Listerr Team
+The current dependency tree reports audit findings; review before production release.
