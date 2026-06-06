@@ -1,26 +1,106 @@
-import "./globals.css"
-import type React from "react" // Import React
+import type { Metadata } from "next"
+import { Baloo_2 } from "next/font/google"
+import type { ReactNode } from "react"
 
-export const metadata = {
-  title: "Listerr - Reconnect with your audience",
-  description: "Reconnect with your audience through meaningful engagement",
-    generator: 'v0.dev'
+import { BreadcrumbBar } from "@/components/site/breadcrumb-bar"
+import { SiteFooter } from "@/components/site/site-footer"
+import { SiteNav } from "@/components/site/site-nav"
+import "./globals.css"
+
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-baloo",
+})
+
+const SITE_URL = "https://listerr.in"
+const SITE_NAME = "Listerr"
+const DEFAULT_TITLE = "Listerr — India's Most Complete Commerce Engagement Platform"
+const DEFAULT_DESCRIPTION =
+  "Stories, Reels, AI Ordering, and Smart Flows in one commerce engagement platform built for Indian brands."
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s — Listerr",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "en_IN",
+    url: SITE_URL,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    creator: "@listerr",
+    site: "@listerr",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/icon.png`,
+  sameAs: [
+    "https://www.linkedin.com/company/listerr",
+    "https://x.com/listerr",
+    "https://www.instagram.com/listerr.in",
+  ],
+}
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${SITE_URL}/search?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
+    <html lang="en-IN">
+      <body className={`${baloo.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-      </head>
-      <body className="font-baloo bg-white">{children}</body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <SiteNav />
+        <BreadcrumbBar />
+        <main id="main-content">{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   )
 }
