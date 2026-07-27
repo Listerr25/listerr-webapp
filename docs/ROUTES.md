@@ -81,6 +81,8 @@
 - `/privacy`
 - `/terms`
 - `/cookies`
+- `/refund`
+- `/cancellation`
 
 ## Legacy Compatibility
 

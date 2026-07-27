@@ -30,3 +30,8 @@ next-env.d.ts
 
 .vercel
 Listerr_Complete_Website_Blueprint.docx
+
+# local npm cache
+.npm-cache/
+npm-cache/
+.npm/

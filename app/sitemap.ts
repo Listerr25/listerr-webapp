@@ -56,6 +56,8 @@ const routes = [
   "/privacy",
   "/terms",
   "/cookies",
+  "/refund",
+  "/cancellation",
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
