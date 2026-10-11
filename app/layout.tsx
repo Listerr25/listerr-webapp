@@ -2,9 +2,7 @@ import type { Metadata } from "next"
 import { Baloo_2 } from "next/font/google"
 import type { ReactNode } from "react"
 
-import { BreadcrumbBar } from "@/components/site/breadcrumb-bar"
-import { SiteFooter } from "@/components/site/site-footer"
-import { SiteNav } from "@/components/site/site-nav"
+import { SiteShell } from "@/components/site/site-shell"
 import "./globals.css"
 
 const baloo = Baloo_2({
@@ -96,10 +94,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <SiteNav />
-        <BreadcrumbBar />
-        <main id="main-content">{children}</main>
-        <SiteFooter />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   )
