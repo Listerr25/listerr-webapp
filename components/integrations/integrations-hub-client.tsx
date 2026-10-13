@@ -420,36 +420,60 @@ export function IntegrationsHubClient() {
             </div>
           </div>
 
-          {/* Category Tabs */}
-          <div className="mt-8 flex flex-wrap gap-2 border-b border-border pb-4">
-            {INTEGRATION_CATEGORIES.map((cat) => {
-              const count =
-                cat.id === "all"
-                  ? INTEGRATIONS_DATA.length
-                  : INTEGRATIONS_DATA.filter((i) => i.category === cat.id).length
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-xs font-bold transition ${
-                    selectedCategory === cat.id
-                      ? "bg-brand-listerr-600 text-white shadow-sm"
-                      : "bg-surface-sunken text-fg-muted hover:bg-surface-raised hover:text-fg"
-                  }`}
-                >
-                  {cat.label}
-                  <span
-                    className={`rounded-full px-1.5 py-0.2 text-[10px] ${
+          {/* Category Filter: Mobile Dropdown + Desktop/Tablet Pills */}
+          <div className="mt-8 border-b border-border pb-4">
+            {/* Mobile Dropdown */}
+            <div className="block sm:hidden w-full mb-3">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full rounded-xl border border-border bg-surface-sunken py-2.5 px-3 text-xs font-bold text-fg focus:outline-none"
+              >
+                {INTEGRATION_CATEGORIES.map((cat) => {
+                  const count =
+                    cat.id === "all"
+                      ? INTEGRATIONS_DATA.length
+                      : INTEGRATIONS_DATA.filter((i) => i.category === cat.id).length
+                  return (
+                    <option key={cat.id} value={cat.id}>
+                      {cat.label} ({count})
+                    </option>
+                  )
+                })}
+              </select>
+            </div>
+
+            {/* Desktop/Tablet Horizontal Pills */}
+            <div className="hidden sm:flex flex-wrap gap-2">
+              {INTEGRATION_CATEGORIES.map((cat) => {
+                const count =
+                  cat.id === "all"
+                    ? INTEGRATIONS_DATA.length
+                    : INTEGRATIONS_DATA.filter((i) => i.category === cat.id).length
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id)}
+                    className={`inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-xs font-bold transition ${
                       selectedCategory === cat.id
-                        ? "bg-white/20 text-white"
-                        : "bg-border text-fg-muted"
+                        ? "bg-brand-listerr-600 text-white shadow-sm"
+                        : "bg-surface-sunken text-fg-muted hover:bg-surface-raised hover:text-fg"
                     }`}
                   >
-                    {count}
-                  </span>
-                </button>
-              )
-            })}
+                    {cat.label}
+                    <span
+                      className={`rounded-full px-1.5 py-0.2 text-[10px] ${
+                        selectedCategory === cat.id
+                          ? "bg-white/20 text-white"
+                          : "bg-border text-fg-muted"
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
           </div>
 
           {/* Protocol Filter Pills */}

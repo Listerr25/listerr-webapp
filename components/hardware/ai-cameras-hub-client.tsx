@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -30,11 +30,15 @@ import {
   Search,
   Scan,
   Maximize2,
+  Filter,
+  SlidersHorizontal,
 } from "lucide-react"
 
 import {
   CAMERAS_DATA,
   VISION_AI_TASKS,
+  CAMERA_CATEGORIES,
+  VISION_TASK_CATEGORIES,
   SEVEN_POINT_ADVANTAGES,
   REACTIVE_RULES_EXAMPLES,
   type CameraProduct,
@@ -42,8 +46,10 @@ import {
 import { Button } from "@/components/ui/button"
 
 export function AiCamerasHubClient() {
+  const [selectedCameraCategory, setSelectedCameraCategory] = useState<string>("all")
   const [selectedCameraId, setSelectedCameraId] = useState<string>("turret")
-  const [selectedTaskIdx, setSelectedTaskIdx] = useState<number>(0)
+  const [selectedTaskCategory, setSelectedTaskCategory] = useState<string>("all")
+  const [selectedTaskId, setSelectedTaskId] = useState<string>("object-detection")
   const [activeRuleIdx, setActiveRuleIdx] = useState<number>(0)
 
   // Configurator State
@@ -51,8 +57,27 @@ export function AiCamerasHubClient() {
     "qsr" | "fine-dining" | "cloud-kitchen" | "cafe" | "prasadam" | "food-court"
   >("qsr")
 
-  const selectedCamera =
-    CAMERAS_DATA.find((c) => c.id === selectedCameraId) || CAMERAS_DATA[0]
+  const filteredCameras = useMemo(() => {
+    if (selectedCameraCategory === "all") return CAMERAS_DATA
+    return CAMERAS_DATA.filter((c) => c.category === selectedCameraCategory)
+  }, [selectedCameraCategory])
+
+  const selectedCamera = useMemo(() => {
+    const found = filteredCameras.find((c) => c.id === selectedCameraId)
+    if (found) return found
+    return filteredCameras[0] || CAMERAS_DATA[0]
+  }, [filteredCameras, selectedCameraId])
+
+  const filteredTasks = useMemo(() => {
+    if (selectedTaskCategory === "all") return VISION_AI_TASKS
+    return VISION_AI_TASKS.filter((t) => t.category === selectedTaskCategory)
+  }, [selectedTaskCategory])
+
+  const selectedTask = useMemo(() => {
+    const found = filteredTasks.find((t) => t.id === selectedTaskId)
+    if (found) return found
+    return filteredTasks[0] || VISION_AI_TASKS[0]
+  }, [filteredTasks, selectedTaskId])
 
   const outletPresets = {
     qsr: {
@@ -386,43 +411,112 @@ export function AiCamerasHubClient() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {VISION_AI_TASKS.map((task, idx) => (
+          {/* Responsive Filter Bar for Vision Tasks */}
+          <div className="mt-8 rounded-2xl border border-border bg-white p-3.5 sm:p-4 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <Filter className="h-4 w-4 text-brand-listerr-600" />
+                <span className="text-xs font-bold uppercase tracking-wider text-fg">
+                  Filter by Objective:
+                </span>
+              </div>
+
+              {/* Mobile Dropdown */}
+              <div className="block sm:hidden w-full">
+                <select
+                  value={selectedTaskCategory}
+                  onChange={(e) => {
+                    const val = e.target.value
+                    setSelectedTaskCategory(val)
+                    const matching = val === "all" ? VISION_AI_TASKS : VISION_AI_TASKS.filter((t) => t.category === val)
+                    if (matching.length > 0) setSelectedTaskId(matching[0].id)
+                  }}
+                  className="w-full rounded-xl border border-border bg-surface-sunken py-2.5 px-3 text-xs font-bold text-fg focus:outline-none"
+                >
+                  {VISION_TASK_CATEGORIES.map((cat) => {
+                    const count = cat.id === "all" ? VISION_AI_TASKS.length : VISION_AI_TASKS.filter((t) => t.category === cat.id).length
+                    return (
+                      <option key={cat.id} value={cat.id}>
+                        {cat.label} ({count})
+                      </option>
+                    )
+                  })}
+                </select>
+              </div>
+
+              {/* Desktop Tabs */}
+              <div className="hidden sm:flex flex-wrap items-center gap-1.5">
+                {VISION_TASK_CATEGORIES.map((cat) => {
+                  const isSelected = selectedTaskCategory === cat.id
+                  const count = cat.id === "all" ? VISION_AI_TASKS.length : VISION_AI_TASKS.filter((t) => t.category === cat.id).length
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => {
+                        setSelectedTaskCategory(cat.id)
+                        const matching = cat.id === "all" ? VISION_AI_TASKS : VISION_AI_TASKS.filter((t) => t.category === cat.id)
+                        if (matching.length > 0) setSelectedTaskId(matching[0].id)
+                      }}
+                      className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
+                        isSelected
+                          ? "bg-brand-listerr-600 text-white shadow-xs"
+                          : "bg-surface-sunken text-fg-muted hover:bg-border hover:text-fg"
+                      }`}
+                    >
+                      <span>{cat.label}</span>
+                      <span
+                        className={`rounded-full px-1.5 py-0.2 text-[10px] font-mono ${
+                          isSelected ? "bg-white/20 text-white" : "bg-border text-fg-muted"
+                        }`}
+                      >
+                        {count}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filteredTasks.map((task) => (
               <div
                 key={task.id}
-                onClick={() => setSelectedTaskIdx(idx)}
-                className={`cursor-pointer rounded-2xl border p-5 transition ${
-                  selectedTaskIdx === idx
+                onClick={() => setSelectedTaskId(task.id)}
+                className={`cursor-pointer rounded-2xl border p-5 transition flex flex-col justify-between ${
+                  selectedTask.id === task.id
                     ? "border-brand-listerr-500 bg-white ring-2 ring-brand-listerr-500/20 shadow-md"
                     : "border-border bg-white hover:border-brand-listerr-200 hover:shadow-sm"
                 }`}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold text-fg-subtle">0{idx + 1}</span>
-                  <span className="rounded bg-brand-listerr-50 px-2 py-0.5 text-[10px] font-bold text-brand-listerr-700">
-                    On-Device
-                  </span>
-                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold text-fg-subtle">{task.categoryLabel}</span>
+                    <span className="rounded bg-brand-listerr-50 px-2 py-0.5 text-[10px] font-bold text-brand-listerr-700">
+                      On-Device
+                    </span>
+                  </div>
 
-                <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-border bg-slate-100 my-2 shadow-xs">
-                  <Image
-                    src={task.image}
-                    alt={task.title}
-                    fill
-                    className="object-cover"
-                    sizes="250px"
-                  />
-                </div>
+                  <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-border bg-slate-100 my-2 shadow-xs">
+                    <Image
+                      src={task.image}
+                      alt={task.title}
+                      fill
+                      className="object-cover"
+                      sizes="250px"
+                    />
+                  </div>
 
-                <h3 className="mt-3 text-base font-bold text-fg">{task.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-fg-muted">
-                  {task.description}
-                </p>
+                  <h3 className="mt-3 text-base font-bold text-fg">{task.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-fg-muted">
+                    {task.description}
+                  </p>
+                </div>
                 <div className="mt-4 border-t border-border pt-3">
                   <p className="text-[10px] uppercase font-bold text-fg-subtle">
                     Application:
                   </p>
-                  <p className="mt-0.5 text-xs font-semibold text-brand-listerr-700">
+                  <p className="mt-0.5 text-xs font-semibold text-brand-listerr-700 truncate">
                     {task.application}
                   </p>
                 </div>
@@ -474,21 +568,68 @@ export function AiCamerasHubClient() {
               </p>
             </div>
 
-            {/* Quick Model Selector Pills */}
-            <div className="flex flex-wrap gap-2">
-              {CAMERAS_DATA.map((cam) => (
-                <button
-                  key={cam.id}
-                  onClick={() => setSelectedCameraId(cam.id)}
-                  className={`rounded-lg px-3 py-1.5 text-xs font-bold transition ${
-                    selectedCameraId === cam.id
-                      ? "bg-brand-listerr-600 text-white shadow-sm"
-                      : "bg-surface-sunken text-fg-muted hover:bg-border hover:text-fg"
-                  }`}
+            {/* Responsive Category Filter + Model Selector */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              {/* Mobile Area Filter Dropdown */}
+              <div className="block sm:hidden w-full">
+                <select
+                  value={selectedCameraCategory}
+                  onChange={(e) => {
+                    const val = e.target.value
+                    setSelectedCameraCategory(val)
+                    const matching = val === "all" ? CAMERAS_DATA : CAMERAS_DATA.filter((c) => c.category === val)
+                    if (matching.length > 0) setSelectedCameraId(matching[0].id)
+                  }}
+                  className="w-full rounded-xl border border-border bg-surface-sunken py-2 px-3 text-xs font-bold text-fg focus:outline-none"
                 >
-                  {cam.formFactor}
-                </button>
-              ))}
+                  {CAMERA_CATEGORIES.map((cat) => (
+                    <option key={cat.id} value={cat.id}>
+                      Zone: {cat.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Desktop Zone Filter Tabs */}
+              <div className="hidden sm:flex flex-wrap gap-1.5">
+                {CAMERA_CATEGORIES.map((cat) => {
+                  const isSelected = selectedCameraCategory === cat.id
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => {
+                        setSelectedCameraCategory(cat.id)
+                        const matching = cat.id === "all" ? CAMERAS_DATA : CAMERAS_DATA.filter((c) => c.category === cat.id)
+                        if (matching.length > 0) setSelectedCameraId(matching[0].id)
+                      }}
+                      className={`rounded-lg px-2.5 py-1 text-xs font-bold transition ${
+                        isSelected
+                          ? "bg-brand-listerr-600 text-white shadow-2xs"
+                          : "bg-surface-sunken text-fg-muted hover:bg-border hover:text-fg"
+                      }`}
+                    >
+                      {cat.label}
+                    </button>
+                  )
+                })}
+              </div>
+
+              {/* Model Pills (Filtered) */}
+              <div className="flex flex-wrap gap-1.5 pt-2 sm:pt-0 sm:border-l sm:border-border sm:pl-3">
+                {filteredCameras.map((cam) => (
+                  <button
+                    key={cam.id}
+                    onClick={() => setSelectedCameraId(cam.id)}
+                    className={`rounded-lg px-3 py-1.5 text-xs font-bold transition ${
+                      selectedCamera.id === cam.id
+                        ? "bg-blue-600 text-white shadow-sm ring-2 ring-blue-500/20"
+                        : "bg-surface-sunken text-fg-muted hover:bg-border hover:text-fg"
+                    }`}
+                  >
+                    {cam.formFactor}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 

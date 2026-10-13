@@ -20,7 +20,18 @@ export interface CameraProduct {
   liveViewDescription: string
   visualBadge: string
   accentColor: string
+  category: "entrance" | "dining" | "counter" | "kitchen" | "retrofit"
+  categoryLabel: string
 }
+
+export const CAMERA_CATEGORIES = [
+  { id: "all", label: "All Models" },
+  { id: "counter", label: "Counters & Billing" },
+  { id: "dining", label: "Dining Floor" },
+  { id: "kitchen", label: "Kitchen & Prep" },
+  { id: "entrance", label: "Entrance & Gate" },
+  { id: "retrofit", label: "CCTV Retrofit" },
+] as const
 
 export const CAMERAS_DATA: CameraProduct[] = [
   {
@@ -89,6 +100,8 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "Line-crossing count at the entrance: every guest receives a steady tracking ID and is counted once in or out.",
     visualBadge: "Outdoor & Entrances",
     accentColor: "from-blue-600 to-cyan-500",
+    category: "entrance",
+    categoryLabel: "Entrance & Gate",
   },
   {
     id: "dome",
@@ -156,6 +169,8 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "Table status from above: occupied, free, and needs-cleaning, updated in real time as guests arrive and leave.",
     visualBadge: "Dining Floor & Tables",
     accentColor: "from-indigo-600 to-purple-500",
+    category: "dining",
+    categoryLabel: "Dining Floor",
   },
   {
     id: "turret",
@@ -223,6 +238,8 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "A queue zone drawn once in the app: the camera counts people inside it and estimates the wait time in seconds.",
     visualBadge: "Billing & Counters",
     accentColor: "from-sky-500 to-blue-600",
+    category: "counter",
+    categoryLabel: "Counters & Billing",
   },
   {
     id: "fisheye",
@@ -290,6 +307,8 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "Heatmap overlay on the floor plan: warm red/amber areas show where guests gather and dwell the longest.",
     visualBadge: "360° Whole Floor",
     accentColor: "from-emerald-500 to-teal-600",
+    category: "dining",
+    categoryLabel: "Dining Floor",
   },
   {
     id: "kitchen-hygiene",
@@ -357,6 +376,8 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "Hygiene gear checked per person in real time: a missing cap or bare hands flags an instant compliance alert.",
     visualBadge: "Kitchen & Food Safety",
     accentColor: "from-amber-500 to-orange-600",
+    category: "kitchen",
+    categoryLabel: "Kitchen & Hygiene",
   },
   {
     id: "edge-box",
@@ -424,10 +445,30 @@ export const CAMERAS_DATA: CameraProduct[] = [
       "Standard IP cameras already on site feed the Edge Box, which transforms raw video into real-time decisions.",
     visualBadge: "CCTV Retrofit Appliance",
     accentColor: "from-slate-700 to-zinc-900",
+    category: "retrofit",
+    categoryLabel: "CCTV Retrofit Hub",
   },
 ]
 
-export const VISION_AI_TASKS = [
+export interface VisionAiTask {
+  id: string
+  title: string
+  description: string
+  application: string
+  icon: string
+  image: string
+  category: "traffic" | "guest-service" | "kitchen-quality"
+  categoryLabel: string
+}
+
+export const VISION_TASK_CATEGORIES = [
+  { id: "all", label: "All Tasks" },
+  { id: "traffic", label: "Queue & Footfall" },
+  { id: "guest-service", label: "Dining & Guest Service" },
+  { id: "kitchen-quality", label: "Kitchen & Food Prep" },
+] as const
+
+export const VISION_AI_TASKS: VisionAiTask[] = [
   {
     id: "object-detection",
     title: "Object Detection",
@@ -435,6 +476,8 @@ export const VISION_AI_TASKS = [
     application: "Footfall counts, queues, table status",
     icon: "Box",
     image: "/images/vision-ai/task-object-detection.png",
+    category: "traffic",
+    categoryLabel: "Queue & Footfall",
   },
   {
     id: "instance-segmentation",
@@ -443,6 +486,8 @@ export const VISION_AI_TASKS = [
     application: "Portion control and dish plating checks",
     icon: "Layers",
     image: "/images/vision-ai/task-instance-segmentation.png",
+    category: "kitchen-quality",
+    categoryLabel: "Kitchen & Food Prep",
   },
   {
     id: "semantic-segmentation",
@@ -451,6 +496,8 @@ export const VISION_AI_TASKS = [
     application: "Zone mapping, crowding density",
     icon: "Grid",
     image: "/images/vision-ai/task-semantic-segmentation.png",
+    category: "guest-service",
+    categoryLabel: "Dining & Guest Service",
   },
   {
     id: "image-classification",
@@ -459,6 +506,8 @@ export const VISION_AI_TASKS = [
     application: "Dish recognition, clean vs dirty table",
     icon: "Tag",
     image: "/images/vision-ai/task-image-classification.png",
+    category: "kitchen-quality",
+    categoryLabel: "Kitchen & Food Prep",
   },
   {
     id: "pose-estimation",
@@ -467,6 +516,8 @@ export const VISION_AI_TASKS = [
     application: "Service requests (raised hand), hand-wash steps",
     icon: "UserCheck",
     image: "/images/vision-ai/task-pose-estimation.png",
+    category: "guest-service",
+    categoryLabel: "Dining & Guest Service",
   },
   {
     id: "depth-estimation",
@@ -475,6 +526,8 @@ export const VISION_AI_TASKS = [
     application: "Physical queue length in meters, spacing",
     icon: "Maximize",
     image: "/images/vision-ai/task-depth-estimation.png",
+    category: "traffic",
+    categoryLabel: "Queue & Footfall",
   },
   {
     id: "oriented-detection",
@@ -483,6 +536,8 @@ export const VISION_AI_TASKS = [
     application: "Trays on the pass, packed delivery bags",
     icon: "RotateCw",
     image: "/images/vision-ai/task-oriented-detection.png",
+    category: "kitchen-quality",
+    categoryLabel: "Kitchen & Food Prep",
   },
   {
     id: "multi-object-tracking",
@@ -491,6 +546,8 @@ export const VISION_AI_TASKS = [
     application: "Counting guests once, dwell time, walking paths",
     icon: "TrendingUp",
     image: "/images/vision-ai/task-multi-object-tracking.png",
+    category: "traffic",
+    categoryLabel: "Queue & Footfall",
   },
 ]
 
