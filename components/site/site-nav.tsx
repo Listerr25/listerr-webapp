@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import type { ReactNode } from "react"
 import { ArrowRight, Bot, Camera, ChevronDown, Cpu, Sparkles, Zap } from "lucide-react"
 
@@ -75,6 +78,9 @@ function NavItem({
 }
 
 export function SiteNav() {
+  const pathname = usePathname()
+  if (pathname?.startsWith("/v2")) return null
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur">
       <a

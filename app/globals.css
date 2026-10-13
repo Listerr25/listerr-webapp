@@ -8,17 +8,20 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-baloo), 'Baloo 2', cursive, sans-serif !important;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: var(--font-baloo), 'Baloo 2', cursive, sans-serif !important;
 }
 
 body {
   min-height: 100vh;
   background: #ffffff;
-  color: #0c0a09;
+  color: #0A1A3D;
+  font-family: var(--font-baloo), 'Baloo 2', cursive, sans-serif !important;
   font-feature-settings: "ss01" on, "cv02" on, "cv03" on;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -26,9 +29,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button, input, optgroup, select, textarea {
+  font-family: var(--font-baloo), 'Baloo 2', cursive, sans-serif !important;
+}
+
 ::selection {
-  background: #ADC9FF;
-  color: #0A1A3D;
+  background: #2563EB;
+  color: #FFFFFF;
 }
 
 @layer base {

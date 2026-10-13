@@ -1,17 +1,17 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { SiteNav } from "@/components/site/site-nav"
-import { BreadcrumbBar } from "@/components/site/breadcrumb-bar"
-import { SiteFooter } from "@/components/site/site-footer"
+import { V2Nav } from "@/components/v2/v2-nav"
+import { V2Footer } from "@/components/v2/v2-footer"
 
 export function SiteShell({ children }: { children: ReactNode }) {
   return (
-    <>
-      <SiteNav />
-      <BreadcrumbBar />
-      <main id="main-content">{children}</main>
-      <SiteFooter />
-    </>
+    <div className="flex min-h-screen flex-col bg-surface text-fg">
+      <V2Nav />
+      <main className="flex-1" id="main-content">
+        {children}
+      </main>
+      <V2Footer />
+    </div>
   )
 }

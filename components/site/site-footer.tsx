@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Instagram, Linkedin, Youtube, PhoneCall } from "lucide-react"
 
 import { SiteLogo } from "@/components/site/logo"
@@ -63,6 +66,9 @@ const columns = [
 ]
 
 export function SiteFooter() {
+  const pathname = usePathname()
+  if (pathname?.startsWith("/v2")) return null
+
   return (
     <footer className="border-t border-border bg-surface-raised">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 lg:px-8">

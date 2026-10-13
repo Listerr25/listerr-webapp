@@ -99,7 +99,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "Line-crossing count at the entrance: every guest receives a steady tracking ID and is counted once in or out.",
     visualBadge: "Outdoor & Entrances",
-    accentColor: "from-blue-600 to-cyan-500",
+    accentColor: "from-blue-600 to-blue-500",
     category: "entrance",
     categoryLabel: "Entrance & Gate",
   },
@@ -168,7 +168,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "Table status from above: occupied, free, and needs-cleaning, updated in real time as guests arrive and leave.",
     visualBadge: "Dining Floor & Tables",
-    accentColor: "from-indigo-600 to-purple-500",
+    accentColor: "from-blue-700 to-blue-600",
     category: "dining",
     categoryLabel: "Dining Floor",
   },
@@ -237,7 +237,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "A queue zone drawn once in the app: the camera counts people inside it and estimates the wait time in seconds.",
     visualBadge: "Billing & Counters",
-    accentColor: "from-sky-500 to-blue-600",
+    accentColor: "from-blue-600 to-blue-500",
     category: "counter",
     categoryLabel: "Counters & Billing",
   },
@@ -306,7 +306,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "Heatmap overlay on the floor plan: warm red/amber areas show where guests gather and dwell the longest.",
     visualBadge: "360° Whole Floor",
-    accentColor: "from-emerald-500 to-teal-600",
+    accentColor: "from-blue-700 to-blue-500",
     category: "dining",
     categoryLabel: "Dining Floor",
   },
@@ -375,7 +375,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "Hygiene gear checked per person in real time: a missing cap or bare hands flags an instant compliance alert.",
     visualBadge: "Kitchen & Food Safety",
-    accentColor: "from-amber-500 to-orange-600",
+    accentColor: "from-blue-600 to-blue-700",
     category: "kitchen",
     categoryLabel: "Kitchen & Hygiene",
   },
@@ -444,7 +444,7 @@ export const CAMERAS_DATA: CameraProduct[] = [
     liveViewDescription:
       "Standard IP cameras already on site feed the Edge Box, which transforms raw video into real-time decisions.",
     visualBadge: "CCTV Retrofit Appliance",
-    accentColor: "from-slate-700 to-zinc-900",
+    accentColor: "from-blue-900 to-blue-700",
     category: "retrofit",
     categoryLabel: "CCTV Retrofit Hub",
   },

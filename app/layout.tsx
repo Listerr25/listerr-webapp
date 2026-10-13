@@ -14,9 +14,9 @@ const baloo = Baloo_2({
 
 const SITE_URL = "https://listerr.in"
 const SITE_NAME = "Listerr"
-const DEFAULT_TITLE = "Listerr — India's Most Complete Commerce Engagement Platform"
+const DEFAULT_TITLE = "Listerr 360 — The Complete Commerce Operating Loop for India"
 const DEFAULT_DESCRIPTION =
-  "Stories, Reels, AI Ordering, and Smart Flows in one commerce engagement platform built for Indian brands."
+  "Orders in (E-commerce), Customers back (CRM), Screens update (CMS), and Cameras watch (IoT Hardware). 0% commission commerce operating system for Indian businesses."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

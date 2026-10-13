@@ -16,7 +16,7 @@ export function BreadcrumbBar() {
   const pathname = usePathname()
   const segments = pathname.split("/").filter(Boolean)
 
-  if (segments.length < 2) return null
+  if (segments.length < 2 || pathname?.startsWith("/v2")) return null
 
   return (
     <nav aria-label="Breadcrumb" className="border-b border-border bg-white">
