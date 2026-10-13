@@ -51,28 +51,29 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { integrationLogos } from "@/components/integration-logos"
+import { HomeVisionAiSection } from "@/components/hardware/home-vision-ai-section"
 
 /* ═══════════════════════════════════════════════════
    HERO 5 DECK CARDS (Real V1 Listerr Footage)
    ═══════════════════════════════════════════════════ */
 const HERO_LISTERR_CARDS = [
   {
-    id: "card-fashion",
-    title: "Fashion Lookbook",
-    subtitle: "Shoppable Stories & Try-On",
-    brand: "@snitch_fashion",
-    tag: "Stories Live",
+    id: "card-qsr",
+    title: "QSR Express Counter",
+    subtitle: "Live Queue & Combo Menu Pacing",
+    brand: "@qsr_express",
+    tag: "AI Ordering",
     stat: "3.2x CVR",
     accent: "#2563EB",
     badgeBg: "bg-blue-600",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcosmetics.mp4",
   },
   {
-    id: "card-flash-sale",
-    title: "Flash Sale D2C",
+    id: "card-cloudkitchen",
+    title: "Cloud Kitchen Pass",
     subtitle: "AI WhatsApp Instant Checkout",
-    brand: "@mamaearth_india",
-    tag: "AI Ordering",
+    brand: "@cloudkitchen_hub",
+    tag: "AI Flows",
     stat: "+64% GMV",
     accent: "#1D4ED8",
     badgeBg: "bg-blue-700",
@@ -90,11 +91,11 @@ const HERO_LISTERR_CARDS = [
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrcover.mp4",
   },
   {
-    id: "card-new-arrivals",
-    title: "New Arrivals Catalog",
-    subtitle: "Multi-Channel Catalog Sync",
-    brand: "@wakefit_home",
-    tag: "Seller Studio",
+    id: "card-dining",
+    title: "Dining Floor Specials",
+    subtitle: "Multi-Outlet Menus & Signage Sync",
+    brand: "@bistro_dining",
+    tag: "Menu Studio",
     stat: "4.1x Repeat",
     accent: "#1E40AF",
     badgeBg: "bg-blue-800",
@@ -102,9 +103,9 @@ const HERO_LISTERR_CARDS = [
   },
   {
     id: "card-trending",
-    title: "Trending Stories",
+    title: "Artisan Cafe Stories",
     subtitle: "Smart Automated Drops & Retention",
-    brand: "@bluetokai_coffee",
+    brand: "@artisan_cafe",
     tag: "Smart Flows",
     stat: "2M+ Views",
     accent: "#0284C7",
@@ -118,28 +119,28 @@ const HERO_LISTERR_CARDS = [
    ═══════════════════════════════════════════════════ */
 const CATALOG_STORIES = [
   {
-    title: "Fashion Lookbook",
+    title: "QSR Express Combos",
     category: "Story",
-    tag: "Cosmetics & Apparel",
+    tag: "Express Counters",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcosmetics.mp4",
     stat: "3.2x CVR",
-    brand: "@snitch_lookbook",
+    brand: "@qsr_express",
   },
   {
-    title: "Flash Sale",
+    title: "Live Pass Dispatch",
     category: "Reel",
-    tag: "D2C Flash Drop",
+    tag: "Cloud Kitchen",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrford2c.mp4",
     stat: "+64% GMV",
-    brand: "@mamaearth_d2c",
+    brand: "@cloudkitchen_hub",
   },
   {
-    title: "New Arrivals",
+    title: "Dining Specials",
     category: "Catalog",
-    tag: "Furniture & Decor",
+    tag: "Table Turnover",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforfurniture.mp4",
     stat: "4.1x Repeat",
-    brand: "@wakefit_living",
+    brand: "@bistro_dining",
   },
   {
     title: "Behind The Scenes",
@@ -147,7 +148,7 @@ const CATALOG_STORIES = [
     tag: "Lifestyle & Tours",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforrealestate.mp4",
     stat: "1.8M Views",
-    brand: "@prestige_spaces",
+    brand: "@spaces_living",
   },
   {
     title: "Product Showcase",
@@ -155,7 +156,7 @@ const CATALOG_STORIES = [
     tag: "Gadgets & Wearables",
     video: "https://cdn.listerr.network/media/Listerr%20website/2.mp4",
     stat: "8.4% CTR",
-    brand: "@boat_lifestyle",
+    brand: "@gadgets_audio",
   },
   {
     title: "Festival Collection",
@@ -163,7 +164,7 @@ const CATALOG_STORIES = [
     tag: "Bakery & Gourmet",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforbakery.mp4",
     stat: "3.8x ROI",
-    brand: "@theobroma_delight",
+    brand: "@gourmet_bakehouse",
   },
   {
     title: "Trending Now",
@@ -171,7 +172,7 @@ const CATALOG_STORIES = [
     tag: "Artisan Cafe",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcafe.mp4",
     stat: "2M Views",
-    brand: "@bluetokai_roasters",
+    brand: "@artisan_roasters",
   },
 ]
 
@@ -182,17 +183,17 @@ const EXPANDING_DECK_CARDS = [
   {
     id: "exp-1",
     title: "Listerr Stories",
-    category: "Fashion Lookbook",
-    brand: "@snitch",
+    category: "QSR Express Pacing",
+    brand: "@qsr_express",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcosmetics.mp4",
     stat: "3.2x CVR",
-    highlight: "Swipe to Buy",
+    highlight: "Order in Line",
   },
   {
     id: "exp-2",
-    title: "AI Voice Order",
+    title: "AI Voice & WhatsApp",
     category: "WhatsApp Cart",
-    brand: "@mamaearth",
+    brand: "@cloudkitchen_hub",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrford2c.mp4",
     stat: "+64% GMV",
     highlight: "Instant UPI",
@@ -208,9 +209,9 @@ const EXPANDING_DECK_CARDS = [
   },
   {
     id: "exp-4",
-    title: "Catalogue Studio",
+    title: "Menu Board Studio",
     category: "Multi-Store Sync",
-    brand: "@wakefit",
+    brand: "@bistro_dining",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforfurniture.mp4",
     stat: "4.1x Repeat",
     highlight: "Auto Sync",
@@ -219,7 +220,7 @@ const EXPANDING_DECK_CARDS = [
     id: "exp-5",
     title: "Smart Retention",
     category: "Automated Triggers",
-    brand: "@bluetokai",
+    brand: "@artisan_cafe",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcafe.mp4",
     stat: "2M Views",
     highlight: "Drop Alerts",
@@ -228,7 +229,7 @@ const EXPANDING_DECK_CARDS = [
     id: "exp-6",
     title: "Creator Affiliates",
     category: "Regional Reach",
-    brand: "@boat_audio",
+    brand: "@listerr_creator",
     video: "https://cdn.listerr.network/media/Listerr%20website/2.mp4",
     stat: "5K+ Creators",
     highlight: "Commission Split",
@@ -236,7 +237,7 @@ const EXPANDING_DECK_CARDS = [
 ]
 
 const TRUSTED_BRANDS = [
-  "SNITCH", "MAMAEARTH", "WAKEFIT", "BLUE TOKAI", "BOAT", "SUGAR", "MINIMALIST", "BOMBAY SHAVING CO"
+  "PETPOOJA", "RESTROWORKS", "URBANPIPER", "DOTPE", "PINE LABS", "CP PLUS", "HIKVISION", "RAZORPAY"
 ]
 
 const PLATFORMS_DATA = [
@@ -346,10 +347,10 @@ const SECTORS_DATA = [
    INTEGRATIONS (Exact V1 Names)
    ═══════════════════════════════════════════════════ */
 const INTEGRATION_NAMES = [
-  "Shopify", "WooCommerce", "Razorpay", "Stripe",
-  "Meta Ads", "Google Ads", "WhatsApp", "MoEngage",
-  "CleverTap", "WebEngage", "Segment", "GA4",
-  "WordPress", "Instagram", "Facebook", "Google Slides",
+  "Petpooja", "Restroworks", "Shopify", "WooCommerce",
+  "UrbanPiper", "Razorpay", "CP Plus", "WhatsApp",
+  "Meta Ads", "Google Ads", "Pine Labs", "MoEngage",
+  "CleverTap", "DotPe", "Segment", "GA4",
 ]
 
 const USE_CASES = [
@@ -510,7 +511,7 @@ export default function HomePageV2Client() {
             className="relative mt-8 md:mt-10 mx-auto max-w-5xl h-[310px] sm:h-[350px] md:h-[380px] flex items-center justify-center perspective-1200 overflow-visible"
           >
             
-            {/* Left Floating Speech Bubble (@snitch) */}
+            {/* Left Floating Speech Bubble (@qsr_express) */}
             <div
               style={{
                 transform: `translateY(${togetherRatio * 20}px) scale(${1 - togetherRatio * 0.25})`,
@@ -521,11 +522,11 @@ export default function HomePageV2Client() {
             >
               <div className="bubble-tag-blue rounded-full bg-blue-600 px-4 py-1.5 text-xs font-bold text-white shadow-lg shadow-blue-600/30 animate-gentle-bounce flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
-                @snitch &bull; 3.2x CVR
+                @qsr_express &bull; 3.2x CVR
               </div>
             </div>
 
-            {/* Right Floating Speech Bubble (@mamaearth) */}
+            {/* Right Floating Speech Bubble (@cloudkitchen_hub) */}
             <div
               style={{
                 transform: `translateY(${togetherRatio * 20}px) scale(${1 - togetherRatio * 0.25})`,
@@ -536,7 +537,7 @@ export default function HomePageV2Client() {
             >
               <div className="bubble-tag-navy rounded-full bg-blue-800 px-4 py-1.5 text-xs font-bold text-white shadow-lg shadow-blue-800/30 animate-gentle-bounce flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
-                @mamaearth &bull; +64% GMV
+                @cloudkitchen_hub &bull; +64% GMV
               </div>
             </div>
 
@@ -834,7 +835,7 @@ export default function HomePageV2Client() {
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-20">
                 <div className="flex items-center gap-2 bg-blue-950/60 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs font-extrabold">@snitch_exclusive</span>
+                  <span className="text-xs font-extrabold">@qsr_express</span>
                 </div>
                 <button
                   onClick={handleSpotlightLike}
@@ -853,19 +854,19 @@ export default function HomePageV2Client() {
               <div className="absolute bottom-5 left-4 right-4 z-20">
                 <div className="rounded-2xl bg-white/95 backdrop-blur-md p-3.5 text-slate-900 shadow-xl border border-blue-100 flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-extrabold text-blue-950">Autumn Oversized Knit</p>
-                    <p className="text-[11px] font-bold text-blue-600">₹1,899 &bull; Free Delivery</p>
+                    <p className="text-xs font-extrabold text-blue-950">Express Combo Special</p>
+                    <p className="text-[11px] font-bold text-blue-600">₹349 &bull; Quick Pickup</p>
                   </div>
                   <Button
                     size="sm"
                     className="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-4"
                     onClick={() => setActiveVideoModal({
                       url: "https://cdn.listerr.network/media/Listerr%20website/listerrcover.mp4",
-                      title: "Listerr Stories Live",
-                      brand: "@snitch",
+                      title: "Listerr Express Ordering",
+                      brand: "@qsr_express",
                     })}
                   >
-                    Buy Now
+                    Order Now
                   </Button>
                 </div>
               </div>
@@ -1438,6 +1439,9 @@ export default function HomePageV2Client() {
           </div>
         </div>
       </section>
+
+      {/* ─── LISTERR ONE VISION AI & AI CAMERAS (CATALOGUE INTEGRATION) ─── */}
+      <HomeVisionAiSection isDarkTheme={true} />
 
       {/* ─── INTEGRATIONS SECTION (Exact V1 Hub & 16 Logos) ──────────── */}
       <section id="integrations" className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50/40">

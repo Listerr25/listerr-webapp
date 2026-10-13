@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { ArrowRight, Bot, ChevronDown } from "lucide-react"
+import { ArrowRight, Bot, Camera, ChevronDown, Cpu, Sparkles, Zap } from "lucide-react"
 
 import { brandList } from "@/lib/brand"
 import { Button } from "@/components/ui/button"
@@ -33,6 +33,15 @@ const aiLinks = [
   ["AI Voice Ordering", "/ai/voice-ordering"],
   ["Listerr Order", "/ai/listerr-order"],
   ["AI Content Cataloging", "/ai/content-cataloging"],
+]
+
+const cameraModels = [
+  { name: "Turret AI Camera", href: "/hardware/ai-cameras/turret", desc: "Counters, queues & POS" },
+  { name: "Dome AI Camera", href: "/hardware/ai-cameras/dome", desc: "Dining tables & turnover" },
+  { name: "Kitchen Hygiene Camera", href: "/hardware/ai-cameras/kitchen-hygiene", desc: "Caps, gloves & food safety" },
+  { name: "Bullet AI Camera", href: "/hardware/ai-cameras/bullet", desc: "Entrances & drive-thrus" },
+  { name: "360° Fisheye AI Camera", href: "/hardware/ai-cameras/fisheye", desc: "Whole-floor heatmaps" },
+  { name: "Vision AI Edge Box", href: "/hardware/ai-cameras/edge-box", desc: "CCTV retrofit appliance" },
 ]
 
 function NavItem({
@@ -77,6 +86,65 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6 lg:px-8">
         <SiteLogo />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+          {/* AI Cameras Dropdown */}
+          <NavItem label="AI Cameras">
+            <div className="grid grid-cols-3 gap-6">
+              <div className="col-span-2 grid grid-cols-2 gap-3">
+                {cameraModels.map((cam) => (
+                  <Link
+                    key={cam.href}
+                    href={cam.href}
+                    className="rounded-lg border border-border/80 p-3.5 transition hover:border-brand-listerr-400 hover:bg-brand-listerr-50/30"
+                  >
+                    <p className="font-bold text-sm text-fg">{cam.name}</p>
+                    <p className="mt-1 text-xs text-fg-muted">{cam.desc}</p>
+                  </Link>
+                ))}
+              </div>
+
+              <div className="rounded-xl bg-gradient-to-br from-brand-listerr-600 to-indigo-700 p-5 text-white flex flex-col justify-between">
+                <div>
+                  <span className="rounded bg-white/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                    Listerr One Series
+                  </span>
+                  <p className="mt-3 text-base font-bold">
+                    Vision AI Built for Indian Restaurants
+                  </p>
+                  <p className="mt-1 text-xs text-brand-listerr-100 leading-relaxed">
+                    Turns standard CCTV into live footfall, queue, table turnover, and hygiene
+                    alerts.
+                  </p>
+                </div>
+                <Link
+                  href="/hardware/ai-cameras"
+                  className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-white hover:underline"
+                >
+                  Explore Complete Camera Catalogue <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-between border-t border-border pt-3 text-xs font-semibold">
+              <Link href="/hardware/ai-cameras#outlet-configurator" className="text-brand-listerr-600 hover:underline">
+                Configure Your Outlet & Estimate ROI
+              </Link>
+              <Link href="/integrations" className="text-fg-muted hover:text-fg">
+                View 35+ POS, CCTV & Signage Integrations
+              </Link>
+            </div>
+          </NavItem>
+
+          {/* Integrations Direct Link */}
+          <Link
+            href="/integrations"
+            className="flex h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold text-fg-muted transition hover:bg-surface-sunken hover:text-fg"
+          >
+            Integrations
+            <span className="rounded-full bg-brand-listerr-100 px-1.5 py-0.2 text-[10px] font-bold text-brand-listerr-700">
+              35+
+            </span>
+          </Link>
+
+          {/* Platform NavItem */}
           <NavItem label="Platform">
             <div className="grid grid-cols-4 gap-4">
               {brandList.map((brand) => {
@@ -104,8 +172,11 @@ export function SiteNav() {
               <Link href="/features">Features</Link>
               <Link href="/integrations">Integrations</Link>
               <Link href="/platform">Platform Overview</Link>
+              <Link href="/hardware/ai-cameras">AI Hardware & Vision</Link>
             </div>
           </NavItem>
+
+          {/* Solutions NavItem */}
           <NavItem label="Solutions">
             <div className="grid grid-cols-3 gap-8">
               <div>
@@ -140,7 +211,7 @@ export function SiteNav() {
                   Featured
                 </p>
                 <p className="mt-3 text-lg font-bold text-fg">
-                  See how Indian brands lift repeat commerce with Stories.
+                  See how Indian brands lift repeat commerce with Stories & Vision AI.
                 </p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-brand-listerr-700">
                   Latest case study <ArrowRight className="h-4 w-4" />
@@ -148,6 +219,8 @@ export function SiteNav() {
               </Link>
             </div>
           </NavItem>
+
+          {/* Listerr AI NavItem */}
           <NavItem label="Listerr AI" dark>
             <div className="grid gap-3">
               <div className="mb-2 flex items-center gap-3">
@@ -173,12 +246,15 @@ export function SiteNav() {
               </Button>
             </div>
           </NavItem>
+
+          {/* Resources NavItem */}
           <NavItem label="Resources">
             <div className="grid min-w-56 gap-2">
               {[
                 ["Blog", "/blog"],
                 ["Case Studies", "/case-studies"],
                 ["Documentation", "/docs"],
+                ["Integrations Directory", "/integrations"],
                 ["Changelog", "/changelog"],
                 ["Storyboard Templates", "/storyboard/templates"],
               ].map(([label, href]) => (
@@ -188,6 +264,8 @@ export function SiteNav() {
               ))}
             </div>
           </NavItem>
+
+          {/* Company NavItem */}
           <NavItem label="Company">
             <div className="grid min-w-52 gap-2">
               {[
@@ -204,7 +282,11 @@ export function SiteNav() {
             </div>
           </NavItem>
         </nav>
+
         <div className="hidden items-center gap-3 lg:flex">
+          <Button asChild variant="outline" size="sm" className="font-semibold">
+            <a href="tel:+919145989198">9145989198</a>
+          </Button>
           <Button asChild variant="listerr">
             <Link href="/access">JOIN LISTERR</Link>
           </Button>

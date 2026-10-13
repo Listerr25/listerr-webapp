@@ -15,6 +15,28 @@ import { SiteLogo } from "@/components/site/logo"
 
 const groups = [
   {
+    title: "AI Hardware & Cameras",
+    links: [
+      ["AI Camera Series Hub", "/hardware/ai-cameras"],
+      ["Turret AI Camera (Counters)", "/hardware/ai-cameras/turret"],
+      ["Dome AI Camera (Tables)", "/hardware/ai-cameras/dome"],
+      ["Kitchen Hygiene Camera", "/hardware/ai-cameras/kitchen-hygiene"],
+      ["Bullet AI Camera (Outdoors)", "/hardware/ai-cameras/bullet"],
+      ["360° Fisheye Camera", "/hardware/ai-cameras/fisheye"],
+      ["Vision AI Edge Box", "/hardware/ai-cameras/edge-box"],
+    ],
+  },
+  {
+    title: "Ecosystem & Integrations",
+    links: [
+      ["Browse All 35+ Integrations", "/integrations"],
+      ["Petpooja & POS Connectors", "/integrations#pos"],
+      ["CCTV & RTSP Streams", "/integrations#cctv-vision"],
+      ["Digital Signage Screens", "/integrations#signage-screens"],
+      ["WhatsApp Operations Bot", "/integrations#messaging-whatsapp"],
+    ],
+  },
+  {
     title: "Platform",
     links: [
       ["Listerr", "/listerr"],
@@ -22,7 +44,6 @@ const groups = [
       ["Listerr Network", "/network"],
       ["Storyboard", "/storyboard"],
       ["Features", "/features"],
-      ["Integrations", "/integrations"],
     ],
   },
   {
@@ -96,7 +117,10 @@ export function MobileNav() {
             </div>
           ))}
         </nav>
-        <div className="border-t border-border pt-5">
+        <div className="border-t border-border pt-5 space-y-2">
+          <Button asChild variant="outline" className="w-full">
+            <a href="tel:+919145989198">Call 9145989198</a>
+          </Button>
           <Button asChild variant="listerr" className="w-full">
             <Link href="/access">JOIN LISTERR</Link>
           </Button>

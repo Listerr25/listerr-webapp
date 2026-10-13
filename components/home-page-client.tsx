@@ -42,6 +42,7 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { integrationLogos } from "@/components/integration-logos"
+import { HomeVisionAiSection } from "@/components/hardware/home-vision-ai-section"
 
 /* ═══════════════════════════════════════════════════
    SCROLL REVEAL HOOK
@@ -1048,10 +1049,10 @@ function CaseStudy() {
    INTEGRATIONS (redesigned, moved near footer)
    ═══════════════════════════════════════════════════ */
 const integrationNames = [
-  "Shopify", "WooCommerce", "Razorpay", "Stripe",
-  "Meta Ads", "Google Ads", "WhatsApp", "MoEngage",
-  "CleverTap", "WebEngage", "Segment", "GA4",
-  "WordPress", "Instagram", "Facebook", "Google Slides",
+  "Petpooja", "Restroworks", "Shopify", "WooCommerce",
+  "UrbanPiper", "Razorpay", "CP Plus", "WhatsApp",
+  "Meta Ads", "Google Ads", "Pine Labs", "MoEngage",
+  "CleverTap", "DotPe", "Segment", "GA4",
 ]
 
 function IntegrationsSection() {
@@ -1293,6 +1294,9 @@ export default function HomePageClient() {
 
       {/* ─── LISTERR AI ──────────────────────────── */}
       <AIShowcase />
+
+      {/* ─── LISTERR ONE VISION AI & AI CAMERAS (CATALOGUE) ─── */}
+      <HomeVisionAiSection />
 
       {/* ─── PRICING ──────────────────────────────── */}
       <PricingSection />
