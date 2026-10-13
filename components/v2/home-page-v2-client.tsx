@@ -236,10 +236,6 @@ const EXPANDING_DECK_CARDS = [
   },
 ]
 
-const TRUSTED_BRANDS = [
-  "PETPOOJA", "RESTROWORKS", "URBANPIPER", "DOTPE", "PINE LABS", "CP PLUS", "HIKVISION", "RAZORPAY"
-]
-
 const PLATFORMS_DATA = [
   {
     slug: "listerr",
@@ -1201,29 +1197,6 @@ export default function HomePageV2Client() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SCENE 9: BRAND LOGO STRIP ───────────────────────────────── */}
-      <section className="py-12 bg-white border-b border-blue-100/70 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 text-center mb-5">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
-            Trusted by fast-growing Indian D2C leaders
-          </p>
-        </div>
-        <div className="relative">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
-          <div className="animate-marquee flex w-max gap-8 items-center pl-4">
-            {[...TRUSTED_BRANDS, ...TRUSTED_BRANDS].map((brand, i) => (
-              <div
-                key={`${brand}-${i}`}
-                className="rounded-full border border-blue-100 bg-blue-50/40 px-6 py-2.5 text-xs font-extrabold tracking-widest text-blue-900 shadow-sm"
-              >
-                {brand}
-              </div>
-            ))}
           </div>
         </div>
       </section>
