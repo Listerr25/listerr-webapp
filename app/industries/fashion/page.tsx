@@ -143,7 +143,7 @@ export default function V2FashionIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Fashion%20Floor%20Totem"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Fashion%20Floor%20Totem"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -176,7 +176,7 @@ export default function V2FashionIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Portable%20A-Frame%20Easel"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Portable%20A-Frame%20Easel"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -209,7 +209,7 @@ export default function V2FashionIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Vertical%20Wall%20Display"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Vertical%20Wall%20Display"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -232,12 +232,12 @@ export default function V2FashionIndustryPage() {
           </p>
           <div className="pt-2">
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20am%20a%20fashion%20seller%20and%20want%20to%20set%20up%20my%20store"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20am%20a%20fashion%20seller%20and%20want%20to%20set%20up%20my%20store"
               target="_blank"
               rel="noreferrer"
             >
               <Button className="bg-white hover:bg-blue-50 text-blue-700 font-bold px-8 py-3 rounded-xl text-sm shadow-md">
-                Chat on WhatsApp (+91 91191 19905)
+                Chat on WhatsApp (+91 91459 89198)
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>

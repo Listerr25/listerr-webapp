@@ -34,7 +34,7 @@ export function V2Footer() {
 
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20to%20inquire%20about%20deploying%20Listerr%20360"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20to%20inquire%20about%20deploying%20Listerr%20360"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 text-xs sm:text-sm transition shadow-lg shadow-blue-600/30"
@@ -43,11 +43,11 @@ export function V2Footer() {
               Chat on WhatsApp
             </a>
             <a
-              href="tel:+919119119905"
+              href="tel:+919145989198"
               className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold px-4 py-2.5 text-xs sm:text-sm transition border border-white/10"
             >
               <Phone className="h-4 w-4 text-blue-300" />
-              +91 91191 19905
+              +91 91459 89198
             </a>
           </div>
         </div>
@@ -122,7 +122,7 @@ export function V2Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-slate-500">
           <div className="space-y-1">
             <p className="font-bold text-slate-400">
-              Listerr Technologies Private Limited
+              Orifinity Private Limited (Listerr)
             </p>
             <p className="flex items-center gap-1.5 text-[11px]">
               <MapPin className="h-3.5 w-3.5 text-slate-400 shrink-0" />

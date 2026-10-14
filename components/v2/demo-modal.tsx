@@ -24,7 +24,7 @@ export function DemoModal({ open, onOpenChange }: DemoModalProps) {
       const msg = encodeURIComponent(
         `Hi Listerr Team, I want to book a live demo of Listerr 360 Software (Industry: ${industry}, Outlets: ${outlets}) for ${businessName}. My phone is ${phone}.`
       )
-      window.open(`https://wa.me/919119119905?text=${msg}`, "_blank")
+      window.open(`https://wa.me/919145989198?text=${msg}`, "_blank")
     }, 1200)
   }
 

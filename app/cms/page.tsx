@@ -160,7 +160,7 @@ export default function V2CmsPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Landscape%20Menu%20Board"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Landscape%20Menu%20Board"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -193,7 +193,7 @@ export default function V2CmsPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Floor%20Totem%20Kiosk"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Floor%20Totem%20Kiosk"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -226,7 +226,7 @@ export default function V2CmsPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%202x2%20Commercial%20Video%20Wall"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%202x2%20Commercial%20Video%20Wall"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"

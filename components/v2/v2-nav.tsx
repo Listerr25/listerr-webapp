@@ -44,15 +44,15 @@ export function V2Nav() {
           </div>
           <div className="hidden md:flex items-center gap-4 text-blue-100/90 shrink-0">
             <a
-              href="tel:+919119119905"
+              href="tel:+919145989198"
               className="flex items-center gap-1.5 hover:text-white transition"
             >
               <Phone className="h-3 w-3 text-blue-300" />
-              <span>Sales: +91 91191 19905</span>
+              <span>Sales: +91 91459 89198</span>
             </a>
             <span className="text-white/20">|</span>
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20to%20explore%20Listerr%20360%20for%20my%20business"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20to%20explore%20Listerr%20360%20for%20my%20business"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1.5 text-blue-200 hover:text-white font-semibold transition"
@@ -539,8 +539,8 @@ export function V2Nav() {
             </div>
 
             <div className="pt-2 text-center text-xs text-slate-500">
-              <a href="tel:+919119119905" className="font-semibold text-blue-700 hover:underline">
-                Call Sales Desk: +91 91191 19905
+              <a href="tel:+919145989198" className="font-semibold text-blue-700 hover:underline">
+                Call Sales Desk: +91 91459 89198
               </a>
             </div>
           </div>

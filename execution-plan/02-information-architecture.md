@@ -73,7 +73,7 @@ About · Careers · Contact · Partners · Press Kit
 | | | Shopify | | |
 
 **Bottom bar:**
-`© 2026 Listerr Technologies Pvt. Ltd.` · `Privacy` · `Terms` · `Cookies` · `Status` · `GST: XXXXXXXXXXXX`
+`© 2026 Orifinity Private Limited` · `Privacy` · `Terms` · `Cookies` · `Status` · `GST: XXXXXXXXXXXX`
 
 ## URL conventions
 

@@ -28,7 +28,7 @@ export function QuoteModal({ open, onOpenChange, preselectedProduct }: QuoteModa
       const msg = encodeURIComponent(
         `Hi Listerr Team, I want a hardware quote for ${hardwareType} (${screenSize}, qty: ${quantity}) for ${businessName || "my business"} in ${city || "India"}. My phone is ${phone}.`
       )
-      window.open(`https://wa.me/919119119905?text=${msg}`, "_blank")
+      window.open(`https://wa.me/919145989198?text=${msg}`, "_blank")
     }, 1200)
   }
 
@@ -171,10 +171,10 @@ export function QuoteModal({ open, onOpenChange, preselectedProduct }: QuoteModa
 
             <div className="pt-2 flex items-center justify-between gap-3">
               <a
-                href="tel:+919119119905"
+                href="tel:+919145989198"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-fg-muted hover:text-fg"
               >
-                <PhoneCall className="h-3.5 w-3.5" /> Call: +91 91191 19905
+                <PhoneCall className="h-3.5 w-3.5" /> Call: +91 91459 89198
               </a>
               <Button
                 type="submit"

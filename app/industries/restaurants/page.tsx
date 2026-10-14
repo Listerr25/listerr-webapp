@@ -144,7 +144,7 @@ export default function V2RestaurantIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Restaurant%20Self-Ordering%20Kiosk"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Restaurant%20Self-Ordering%20Kiosk"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -177,7 +177,7 @@ export default function V2RestaurantIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Landscape%20Digital%20Menu%20Board"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Landscape%20Digital%20Menu%20Board"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -210,7 +210,7 @@ export default function V2RestaurantIndustryPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Countertop%20POS%20Touch%20Screen"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20a%20quote%20for%20the%20Countertop%20POS%20Touch%20Screen"
                 target="_blank"
                 rel="noreferrer"
                 className="block pt-2"
@@ -233,12 +233,12 @@ export default function V2RestaurantIndustryPage() {
           </p>
           <div className="pt-2">
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20to%20set%20up%20Listerr%20360%20for%20my%20restaurant"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20to%20set%20up%20Listerr%20360%20for%20my%20restaurant"
               target="_blank"
               rel="noreferrer"
             >
               <Button className="bg-white hover:bg-blue-50 text-blue-700 font-bold px-8 py-3 rounded-xl text-sm shadow-md">
-                Connect on WhatsApp (+91 91191 19905)
+                Connect on WhatsApp (+91 91459 89198)
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>

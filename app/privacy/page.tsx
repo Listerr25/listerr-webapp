@@ -148,8 +148,8 @@ export default function PrivacyPage() {
             <section id="contact" className="rounded-xl border border-border bg-surface-raised p-6">
               <h2 className="text-2xl font-extrabold text-fg">Grievance Officer</h2>
               <p className="mt-4 leading-8">
-                Grievance Officer, Listerr Technologies Pvt. Ltd.<br />
-                India HQ: Bengaluru, Karnataka, India<br />
+                Grievance Officer, Orifinity Private Limited<br />
+                India HQ: Jaipur, Rajasthan, India<br />
                 Email: grievance@listerr.in
               </p>
             </section>

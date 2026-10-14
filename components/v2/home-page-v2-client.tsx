@@ -345,13 +345,13 @@ export function HomePageV2Client() {
               Request Hardware Quote
             </Button>
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20to%20know%20more%20about%20the%20360%20commerce%20loop"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20to%20know%20more%20about%20the%20360%20commerce%20loop"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-2xl bg-blue-50 border border-blue-200 hover:bg-blue-100 px-5 py-3 text-xs sm:text-sm font-bold text-blue-900 transition h-12"
             >
               <MessageCircle className="h-4 w-4 text-blue-600" />
-              WhatsApp Direct (+91 91191 19905)
+              WhatsApp Direct (+91 91459 89198)
             </a>
           </div>
 
@@ -1439,13 +1439,13 @@ export function HomePageV2Client() {
               Book 15-Min Live Screen Share
             </Button>
             <a
-              href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20am%20ready%20to%20get%20started%20with%20Listerr%20360"
+              href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20am%20ready%20to%20get%20started%20with%20Listerr%20360"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-2xl bg-blue-700 hover:bg-blue-600 text-white border border-blue-500/40 font-bold px-6 py-3 text-sm transition"
             >
               <MessageCircle className="h-4 w-4" />
-              Chat on WhatsApp (+91 91191 19905)
+              Chat on WhatsApp (+91 91459 89198)
             </a>
           </div>
         </div>

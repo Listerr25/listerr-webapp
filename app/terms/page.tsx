@@ -165,8 +165,8 @@ export default function TermsPage() {
             <section id="contact" className="rounded-xl border border-border bg-surface-raised p-6">
               <h2 className="text-2xl font-extrabold text-fg">Contact</h2>
               <p className="mt-4 leading-8">
-                Listerr Technologies Pvt. Ltd.<br />
-                Bengaluru, Karnataka, India<br />
+                Orifinity Private Limited<br />
+                Jaipur, Rajasthan, India<br />
                 Email: legal@listerr.in
               </p>
             </section>

@@ -102,7 +102,7 @@ export default function V2PricingPage() {
 
             <div className="pt-8">
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20to%20subscribe%20to%20The%20One%20Software%20Plan%20for%20my%20store"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20to%20subscribe%20to%20The%20One%20Software%20Plan%20for%20my%20store"
                 target="_blank"
                 rel="noreferrer"
                 className="block"
@@ -189,7 +189,7 @@ export default function V2PricingPage() {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/919119119905?text=Hi%20Listerr%2C%20I%20want%20an%20official%20quote%20for%20screens%20and%20hardware"
+                href="https://wa.me/919145989198?text=Hi%20Listerr%2C%20I%20want%20an%20official%20quote%20for%20screens%20and%20hardware"
                 target="_blank"
                 rel="noreferrer"
                 className="block"
@@ -200,10 +200,10 @@ export default function V2PricingPage() {
               </a>
               <div className="text-center">
                 <a
-                  href="tel:+919119119905"
+                  href="tel:+919145989198"
                   className="text-[11px] font-bold text-slate-500 hover:text-blue-700"
                 >
-                  Or call sales: +91 91191 19905
+                  Or call sales: +91 91459 89198
                 </a>
               </div>
             </div>
