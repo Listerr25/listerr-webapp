@@ -42,7 +42,7 @@ export default function AnalyticsPage() {
       ]}
       metrics={[
         { value: "2M+", label: "Story views" },
-        { value: "₹50Cr+", label: "Attributed GMV" },
+        { value: "100%", label: "Direct Attribution" },
         { value: "Real-time", label: "Scale API" },
         { value: "1", label: "Seller dashboard" },
       ]}

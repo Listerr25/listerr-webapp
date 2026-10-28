@@ -15,53 +15,46 @@ import {
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "03 Signage CMS · Listerr 360",
+  title: "Digital Signage Cloud CMS",
   description: "Screens that update themselves. Cloud remote management, USB offline software, Petpooja POS-driven menu boards, and kitchen displays.",
+  alternates: {
+    canonical: "/cms",
+  },
 }
 
 const CMS_FEATURES = [
   {
     id: "cloud-cms",
-    code: "CMS-02",
     title: "Listerr Cloud Signage CMS",
     desc: "Remote multi-outlet content distribution. Push video reels, promotional banners, and scheduled dayparting (breakfast, lunch, dinner) to 1 or 500+ screens in seconds.",
-    source: "Listerr One Catalogue p.3",
     icon: Cloud,
     accent: "bg-blue-50 text-blue-700",
   },
   {
     id: "offline-cms",
-    code: "CMS-03",
     title: "Offline USB (Pendrive) Software",
     desc: "Built-in offline engine: content loops automatically from local USB storage. If store Wi-Fi cuts off, screens never flicker or show blue error screens.",
-    source: "Listerr One Catalogue p.4",
     icon: RotateCcw,
     accent: "bg-blue-50 text-blue-700",
   },
   {
     id: "pos-screens",
-    code: "CMS-04",
     title: "POS-Driven Live Menu Boards",
     desc: "Direct integration with Petpooja restaurant POS. Price edits reflect on screens in real time; when an item runs out at the counter, it strikes off the screen automatically.",
-    source: "Listerr 360 p.3",
     icon: UtensilsCrossed,
     accent: "bg-blue-50 text-blue-700",
   },
   {
     id: "ai-autopost",
-    code: "CMS-05",
     title: "AI Auto-Posting on Signage",
     desc: "Auto-converts your best Instagram reels and new menu item photos into high-definition portrait display visuals without manual graphic design work.",
-    source: "Listerr 360 p.3",
     icon: Sparkles,
     accent: "bg-blue-50 text-blue-700",
   },
   {
     id: "staff-screens",
-    code: "CMS-06",
     title: "Staff & Back-Office KDS Displays",
     desc: "Kitchen display system (KDS) screens showing live ticket pacing, order ready status for counter pickup, and kitchen station preparation queues.",
-    source: "Listerr 360 p.3",
     icon: SlidersHorizontal,
     accent: "bg-blue-50 text-blue-700",
   },
@@ -75,7 +68,7 @@ export default function V2CmsPage() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 mb-3 shadow-xs">
             <Tv className="h-3.5 w-3.5 text-blue-600" />
-            03 · Digital Signage CMS (CMS-01 to CMS-06)
+            03 · Digital Signage CMS
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-blue-950 tracking-tight leading-tight">
             Screens That Update Themselves Anywhere.
@@ -100,16 +93,12 @@ export default function V2CmsPage() {
                     <div className={`h-10 w-10 rounded-xl flex items-center justify-center font-bold ${item.accent} border border-blue-100`}>
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">
-                      {item.code}
-                    </span>
                   </div>
                   <h3 className="text-lg font-bold text-blue-950">{item.title}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
                 <div className="pt-3 border-t border-blue-100 flex items-center justify-between text-[11px] text-slate-500 font-semibold">
-                  <span>Source: {item.source}</span>
-                  <span className="text-blue-600 font-bold">100% Redundancy</span>
+                  <span className="text-blue-600 font-bold">100% Offline Redundancy</span>
                 </div>
               </div>
             )
@@ -121,7 +110,7 @@ export default function V2CmsPage() {
           <div className="flex flex-col sm:row sm:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-black uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
-                Hardware + CMS Synergy (IOT-02)
+                Hardware + CMS Synergy
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-tight mt-2">
                 Certified Listerr One Commercial Screens

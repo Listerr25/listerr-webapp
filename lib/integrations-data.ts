@@ -416,13 +416,13 @@ export const INTEGRATIONS_DATA: IntegrationItem[] = [
 
   // Delivery & Logistics
   {
-    id: "shiprocket-dunzo-porter",
-    name: "Shiprocket, Dunzo & Porter",
+    id: "shiprocket-shadowfax-porter",
+    name: "Shiprocket, Shadowfax & Porter",
     category: "delivery-logistics",
     categoryLabel: "Delivery & Logistics",
     shortDesc: "Hyperlocal 15-45 minute dispatch and national courier tracking for omnichannel retail.",
     fullDesc:
-      "Automatically summon Dunzo/Shadowfax/Porter riders when the Kitchen Hygiene Camera logs a packed order on the dispatch pass.",
+      "Automatically summon Shadowfax/Porter riders when the Kitchen Hygiene Camera logs a packed order on the dispatch pass.",
     protocols: ["REST API", "Webhooks", "Real-time rider tracking"],
     status: "Direct API",
     popularInIndia: true,

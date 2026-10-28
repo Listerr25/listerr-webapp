@@ -60,47 +60,47 @@ export function HomePageV2Client() {
   const V1_MERCHANT_REELS = [
     {
       id: "reel-qsr",
-      title: "QSR Express Counter",
-      subtitle: "Live Queue & Combo Menu Pacing",
-      brand: "@qsr_express",
+      title: "QSR Counter Demo",
+      subtitle: "Queue & Combo Menu Pacing",
+      brand: "Product Demo",
       tag: "AI Ordering",
-      stat: "3.2x CVR",
+      stat: "QR Ordering",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcosmetics.mp4",
     },
     {
       id: "reel-cloudkitchen",
-      title: "Cloud Kitchen Pass",
-      subtitle: "AI WhatsApp Instant Checkout",
-      brand: "@cloudkitchen_hub",
+      title: "Cloud Kitchen Demo",
+      subtitle: "WhatsApp Instant Checkout",
+      brand: "Product Demo",
       tag: "AI Flows",
-      stat: "+64% GMV",
+      stat: "WhatsApp Orders",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrford2c.mp4",
     },
     {
       id: "reel-flagship",
-      title: "Listerr Engagement",
-      subtitle: "Stories, Reels & AI Flows",
-      brand: "@listerr_live",
-      tag: "Flagship Reel",
-      stat: "₹50Cr+ GMV",
+      title: "Listerr 360 Overview",
+      subtitle: "Full Commerce Loop in Action",
+      brand: "Product Demo",
+      tag: "Platform Demo",
+      stat: "Full Loop",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrcover.mp4",
     },
     {
       id: "reel-dining",
-      title: "Dining Floor Specials",
+      title: "Dining Floor Demo",
       subtitle: "Multi-Outlet Menus & Signage Sync",
-      brand: "@bistro_dining",
+      brand: "Product Demo",
       tag: "Menu Studio",
-      stat: "4.1x Repeat",
+      stat: "POS Sync",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrforfurniture.mp4",
     },
     {
       id: "reel-cafe",
-      title: "Artisan Cafe Stories",
-      subtitle: "Smart Automated Drops & Retention",
-      brand: "@artisan_cafe",
+      title: "Cafe Setup Demo",
+      subtitle: "Automated Drops & Retention",
+      brand: "Product Demo",
       tag: "Smart Flows",
-      stat: "2M+ Views",
+      stat: "CRM Demo",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcafe.mp4",
     },
   ]
@@ -109,14 +109,13 @@ export function HomePageV2Client() {
   const V1_INTEGRATIONS = [
     { name: "Petpooja POS", category: "Billing & KOT Sync", highlight: "Real-Time Menu Sync" },
     { name: "Shopify", category: "E-Commerce", highlight: "Catalog & OMS Sync" },
-    { name: "WhatsApp Business (WABA)", category: "Official Meta API", highlight: "Official Meta Verified Badge" },
+    { name: "WhatsApp Business (WABA)", category: "Official Meta API", highlight: "Official WhatsApp Business API" },
     { name: "DotPe", category: "Omnichannel Commerce", highlight: "QR Catalog Bridge" },
     { name: "Posist POS", category: "Restaurant POS", highlight: "Inventory & Recipe Sync" },
     { name: "Razorpay", category: "Payment Gateway", highlight: "Instant UPI Settlements" },
-    { name: "Paytm Business", category: "UPI & Soundbox", highlight: "0% UPI MDR" },
+    { name: "Paytm Business", category: "UPI & Soundbox", highlight: "UPI Payment Acceptance" },
     { name: "Pine Labs", category: "Card POS Terminal", highlight: "Countertop Hardware Bridge" },
     { name: "UrbanPiper", category: "Delivery Aggregator Hub", highlight: "Central OMS Relay" },
-    { name: "Dunzo for Business", category: "Local Logistics", highlight: "30-Min Direct Dispatch" },
     { name: "Shiprocket", category: "Pan-India Courier", highlight: "Auto-AWB Generation" },
     { name: "Google Merchant", category: "Search & Maps", highlight: "Local Inventory Ads" },
     { name: "Meta Ads & Pixels", category: "Instagram / FB", highlight: "Conversion API Loop" },
@@ -129,8 +128,8 @@ export function HomePageV2Client() {
   const V1_COMPARISON = [
     {
       feature: "Sales Commission",
-      listerr: "0% Commission (Keep 100% of Bill Value)",
-      traditional: "25% to 30% Per Order Cut (Zomato / Swiggy)",
+      listerr: "0% Platform Commission on Direct Orders",
+      traditional: "25% to 30% Per Order Cut (Aggregators)",
       listerrBetter: true,
     },
     {
@@ -141,8 +140,8 @@ export function HomePageV2Client() {
     },
     {
       feature: "UPI Payment Settlements",
-      listerr: "Instant Direct to Bank Account (T+0)",
-      traditional: "Weekly / Monthly Delayed Payout Deductions",
+      listerr: "Direct to Bank Account (settlement timing depends on gateway)",
+      traditional: "Aggregator-Controlled Delayed Payout Cycles",
       listerrBetter: true,
     },
     {
@@ -169,11 +168,11 @@ export function HomePageV2Client() {
   const V1_FAQS = [
     {
       q: "Can I keep using our existing Petpooja or billing POS?",
-      a: "Yes, 100%. Listerr 360 integrates directly with Petpooja, Posist, and custom billing software. When you change a price or mark an item 86 (out-of-stock) in your POS, it updates your table QR menu, direct web store, and commercial digital menu boards within 2 seconds.",
+      a: "Yes. Listerr 360 integrates directly with Petpooja, Posist, and custom billing software. When you change a price or mark an item 86 (out-of-stock) in your POS, it updates your table QR menu, direct web store, and commercial digital menu boards.",
     },
     {
       q: "How does the 0% commission direct ordering model work?",
-      a: "Unlike delivery aggregators that charge 25% to 30% on every order, Listerr charges a predictable flat software subscription (₹4,999/month). All customer payments via UPI QR, Google Pay, PhonePe, or cards go directly into your current account with 0% commission deductions.",
+      a: "Unlike delivery aggregators that charge 25% to 30% on every order, Listerr charges a predictable flat software subscription (₹4,999/month). All customer payments via UPI QR, Google Pay, PhonePe, or cards go directly into your bank account. Standard payment gateway fees may apply per your gateway provider.",
     },
     {
       q: "What warranty and mounting equipment comes with Listerr One screens?",
@@ -181,15 +180,15 @@ export function HomePageV2Client() {
     },
     {
       q: "Do I need special Meta approval for WhatsApp Business (WABA)?",
-      a: "Our onboarding team in Jaipur assists with complete Meta Business verification and official verified badge registration. You get pre-approved interactive transactional templates for order confirmation, live delivery tracking, birthday coupons, and win-back offers.",
+      a: "Our onboarding team in Jaipur assists with complete Meta Business verification and WhatsApp Business API setup. You get pre-approved interactive transactional templates for order confirmation, delivery tracking, birthday coupons, and win-back offers. The green verified badge is granted separately by Meta based on their review.",
     },
     {
       q: "Can I purchase Listerr One hardware without the software or vice versa?",
-      a: "Yes. If you already have existing Android commercial displays or tablets, you can subscribe to The One Software Plan (₹4,999/mo). Conversely, if you only need commercial screens or AI vision cameras, you can buy hardware outright at factory wholesale rates.",
+      a: "Yes. If you already have existing Android commercial displays or tablets, you can subscribe to the Listerr 360 Software Plan (₹4,999/mo). Conversely, if you only need commercial screens or AI vision cameras, you can request a hardware quote with competitive pricing.",
     },
     {
       q: "How fast can my outlet go live?",
-      a: "Our team in Jaipur configures your digital catalog, connects your Petpooja POS menu, and delivers your table QR codes within 24 to 48 hours. Hardware dispatches from our Jaipur facility with pan-India insured transit.",
+      a: "Our team in Jaipur configures your digital catalog, connects your Petpooja POS menu, and delivers your table QR codes within 24–48 hours. Hardware dispatches from our Jaipur facility with pan-India insured transit.",
     },
   ]
 
@@ -206,16 +205,16 @@ export function HomePageV2Client() {
       accentBorder: "border-blue-600",
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       description:
-        "Customers order directly through table QR codes, digital catalog lookbooks, or conversational WhatsApp AI. Zero commission to third-party aggregators, with instant UPI settlements.",
+        "Customers order directly through table QR codes, digital catalog lookbooks, or conversational WhatsApp AI. Zero platform commission on direct orders.",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrforcosmetics.mp4",
-      docRef: "Listerr 360 p.2 & Fashion Deck p.4",
+      docRef: "",
       highlights: [
         "Table & Counter QR Ordering",
         "0% Commission Online Takeaway Store",
         "Shoppable Digital Catalogs & Lookbooks",
         "Unified Multi-Channel OMS Inbox",
       ],
-      metrics: "0% Commission · Instant UPI · <3s Menu Load",
+      metrics: "0% Platform Commission · Direct UPI",
     },
     {
       id: "customers",
@@ -228,16 +227,16 @@ export function HomePageV2Client() {
       accentBorder: "border-blue-600",
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       description:
-        "Every ordering customer is saved into your verified customer list. Send automated birthday drops, win-back discounts, and personalized offers over official Meta WhatsApp (WABA).",
+        "Every ordering customer is saved into your customer list. Send automated birthday drops, win-back discounts, and personalized offers over official Meta WhatsApp Business API.",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrford2c.mp4",
-      docRef: "Listerr 360 p.3 & Fashion Deck p.11",
+      docRef: "",
       highlights: [
-        "Verified Meta WhatsApp Business API",
+        "Official WhatsApp Business API (WABA)",
         "Auto-Trigger Birthday & Win-Back Drops",
         "Customer Points, Cashback & Loyalty Tiers",
-        "Accurate GMV Attribution per Campaign",
+        "Campaign ROI Attribution",
       ],
-      metrics: "78% WhatsApp Open Rates · 4.2x Repeat Orders",
+      metrics: "High WhatsApp Open Rates · Repeat Order Tracking",
     },
     {
       id: "screens",
@@ -250,16 +249,16 @@ export function HomePageV2Client() {
       accentBorder: "border-blue-600",
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       description:
-        "Digital signage screens update automatically from your POS or Listerr cloud. When an item runs out on Petpooja or your store, it instantly drops from the screen with zero manual reprinting.",
+        "Digital signage screens update automatically from your POS or Listerr cloud. When an item runs out on Petpooja or your store, it drops from the screen with zero manual reprinting.",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrforfurniture.mp4",
-      docRef: "Listerr One Catalogue p.3 & 360 p.3",
+      docRef: "",
       highlights: [
         "Petpooja POS Real-Time Menu Sync",
-        "Offline USB Playback (Zero Internet Downtime)",
+        "Offline USB Playback (Internet Downtime Backup)",
         "Scheduled Dayparting (Breakfast/Lunch/Dinner)",
         "Kitchen Display System (KDS) Pacing Screens",
       ],
-      metrics: "100% Offline Redundancy · <5s Cloud Push",
+      metrics: "USB Offline Backup · Cloud Push Sync",
     },
     {
       id: "cameras",
@@ -272,16 +271,16 @@ export function HomePageV2Client() {
       accentBorder: "border-blue-600",
       badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       description:
-        "Listerr One AI Cameras and Edge Boxes track store footfall, table occupancy, counter queues, and kitchen staff food safety (caps, aprons, gloves) without storing intrusive customer video.",
+        "Listerr One AI Cameras track store footfall, table occupancy, counter queues, and kitchen staff food safety (caps, aprons, gloves) with edge processing.",
       video: "https://cdn.listerr.network/media/Listerr%20website/listerrcover.mp4",
-      docRef: "Listerr 360 p.4 & Listerr One p.12",
+      docRef: "",
       highlights: [
         "Kitchen Hygiene AI (Cap & Glove Compliance)",
         "Counter Queue Pacing & Billing Bottlenecks",
         "Store Footfall & Conversion Heatmaps",
-        "Edge Processing (DPDP Act India Compliant)",
+        "Edge Processing (Privacy-Friendly Design)",
       ],
-      metrics: "99.2% Vision Accuracy · Real-Time Alerts",
+      metrics: "Edge-Processed Vision · Real-Time Alerts",
     },
   ]
 
@@ -298,10 +297,7 @@ export function HomePageV2Client() {
           <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 shadow-xs">
               <Sparkles className="h-3.5 w-3.5 text-blue-600" />
-              Listerr 360 Architecture (v2 Blueprint)
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-white border border-blue-100 px-3 py-1 text-xs font-semibold text-slate-500 shadow-2xs">
-              Official Commerce Operating Loop · May–Oct 2026
+              Listerr 360
             </span>
           </div>
 
@@ -409,9 +405,6 @@ export function HomePageV2Client() {
                   >
                     Part {currentStep.stepNumber} · {currentStep.pillar}
                   </span>
-                  <span className="text-xs font-semibold text-fg-muted">
-                    Source: {currentStep.docRef}
-                  </span>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-black text-fg tracking-tight">
@@ -476,22 +469,22 @@ export function HomePageV2Client() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-border">
             <div className="pt-4 md:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-blue-600">0%</p>
-              <p className="text-xs font-bold text-fg mt-1">Aggregator Commission</p>
-              <p className="text-[11px] text-fg-muted">Keep 100% of your customer revenue</p>
+              <p className="text-xs font-bold text-fg mt-1">Platform Commission</p>
+              <p className="text-[11px] text-fg-muted">On direct orders (gateway fees may apply)</p>
             </div>
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-black text-blue-700">&lt; 3 sec</p>
-              <p className="text-xs font-bold text-fg mt-1">QR Dine-In Load Time</p>
+              <p className="text-3xl sm:text-4xl font-black text-blue-700">Fast</p>
+              <p className="text-xs font-bold text-fg mt-1">QR Dine-In Load</p>
               <p className="text-[11px] text-fg-muted">No app install required for customers</p>
             </div>
             <div className="pt-4 md:pt-0">
-              <p className="text-3xl sm:text-4xl font-black text-blue-800">100%</p>
-              <p className="text-xs font-bold text-fg mt-1">Offline Screen Redundancy</p>
-              <p className="text-[11px] text-fg-muted">USB fallback if Wi-Fi drops</p>
+              <p className="text-3xl sm:text-4xl font-black text-blue-800">USB</p>
+              <p className="text-xs font-bold text-fg mt-1">Offline Screen Backup</p>
+              <p className="text-[11px] text-fg-muted">Pendrive fallback if Wi-Fi drops</p>
             </div>
             <div className="pt-4 md:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-blue-600">500 nits</p>
-              <p className="text-xs font-bold text-fg mt-1">Commercial 4K Panels</p>
+              <p className="text-xs font-bold text-fg mt-1">Indoor Commercial Panels</p>
               <p className="text-[11px] text-fg-muted">24/7 rated anti-glare screens</p>
             </div>
           </div>
@@ -509,18 +502,18 @@ export function HomePageV2Client() {
               Explore Every Feature Across the 4 Pillars
             </h2>
             <p className="text-sm text-fg-muted mt-2">
-              Everything specified across the Listerr 360 Brochure, Listerr One Catalogue, and Fashion Sellers Deck.
+              The complete Listerr 360 platform covers e-commerce, CRM, signage, and IoT hardware — all working together.
             </p>
           </div>
 
           {/* Tab Selector */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
             {[
-              { id: "ecommerce", label: "01 E-commerce (11 Items)", icon: ShoppingBag, color: "text-blue-600" },
-              { id: "crm", label: "02 CRM & Retention (7 Items)", icon: Users, color: "text-blue-600" },
-              { id: "cms", label: "03 Signage CMS (6 Items)", icon: Tv, color: "text-blue-600" },
-              { id: "hardware", label: "04 IoT & Hardware (8 Items)", icon: Cpu, color: "text-blue-600" },
-              { id: "advanced", label: "Advanced AI Engine (5 Items)", icon: Bot, color: "text-blue-600" },
+              { id: "ecommerce", label: "01 E-commerce", icon: ShoppingBag, color: "text-blue-600" },
+              { id: "crm", label: "02 CRM & Retention", icon: Users, color: "text-blue-600" },
+              { id: "cms", label: "03 Signage CMS", icon: Tv, color: "text-blue-600" },
+              { id: "hardware", label: "04 IoT & Hardware", icon: Cpu, color: "text-blue-600" },
+              { id: "advanced", label: "Advanced AI Engine", icon: Bot, color: "text-blue-600" },
             ].map((tab) => {
               const Icon = tab.icon
               const active = activePillarTab === tab.id
@@ -552,9 +545,7 @@ export function HomePageV2Client() {
                 <p className="text-xs text-fg-muted leading-relaxed">
                   Interactive mobile-friendly digital menus and fashion lookbooks. Guests scan table QRs to place orders directly without waiting for service staff.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-02, ECM-03 · 360 p.2
-                </div>
+
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-3">
@@ -565,9 +556,7 @@ export function HomePageV2Client() {
                 <p className="text-xs text-fg-muted leading-relaxed">
                   Your direct brand ordering website for takeaway and delivery. Zero aggregators eating 25-30% of your margin. Instant UPI QR checkout.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-04 · Fashion p.5
-                </div>
+
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-3">
@@ -578,9 +567,7 @@ export function HomePageV2Client() {
                 <p className="text-xs text-fg-muted leading-relaxed">
                   AI conversational agent that understands Hinglish food and apparel orders over WhatsApp text or voice clips. Auto-generates billing tickets into OMS.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-09 · 360 p.2
-                </div>
+
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-3">
@@ -591,9 +578,7 @@ export function HomePageV2Client() {
                 <p className="text-xs text-fg-muted leading-relaxed">
                   Generate studio-grade product photos and promotional video clips from a single product snap. Built for Instagram and WhatsApp drops.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-07 · Fashion p.12
-                </div>
+
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-3">
@@ -604,9 +589,7 @@ export function HomePageV2Client() {
                 <p className="text-xs text-fg-muted leading-relaxed">
                   One single order dashboard reconciling table QR, takeaway, website, and WhatsApp orders with live kitchen tickets.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-10 · 360 p.2
-                </div>
+
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-3">
@@ -615,11 +598,8 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-fg">Listerr Network & Discovery</h4>
                 <p className="text-xs text-fg-muted leading-relaxed">
-                  Get discovered across the Listerr consumer network and cross-brand customer affinity circles without paying high CAC.
+                  Get discovered across the Listerr consumer network. Opt-in cross-promotion helps drive discovery without paying high customer acquisition costs.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 p-2 rounded-lg">
-                  ECM-08 · Network §3
-                </div>
               </div>
             </div>
           )}
@@ -632,11 +612,8 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-blue-950">Official WhatsApp Business (WABA)</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Meta-verified official badge WhatsApp business profile with high deliverability, automated greeting, and direct interactive menus.
+                  Official WhatsApp Business API profile with high deliverability, automated greeting, and direct interactive menus.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CRM-02 · 360 p.3
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -645,11 +622,8 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-blue-950">Auto-Trigger Campaigns</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Automated customer lifecycle triggers: send birthday coupons on day 0, anniversary treats, and "We miss you" win-backs after 21 days of inactivity.
+                  Automated customer lifecycle triggers: send birthday coupons on day 0, anniversary treats, and &quot;We miss you&quot; win-backs after 21 days of inactivity.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CRM-03 · 360 p.3
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -660,9 +634,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Tiered membership programs (Silver, Gold, VIP) with automated wallet cashback and redeemable reward points on every bill.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CRM-05 · Fashion p.11
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -673,9 +644,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Group buyers by spending frequency, favorite dishes or categories, and average order value for ultra-targeted marketing.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CRM-06 · 360 p.3
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -686,9 +654,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Real revenue attribution reporting: see exactly how many rupees of GMV each WhatsApp blast or promotional offer generated.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CRM-07 · 360 p.3
-                </div>
               </div>
             </div>
           )}
@@ -701,11 +666,8 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-blue-950">Cloud Multi-Store Signage CMS</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Manage commercial screens across 1 to 500+ stores from a single browser tab. Push animated promotions, videos, and playlists instantly.
+                  Manage commercial screens across multiple stores from a single browser tab. Push animated promotions, videos, and playlists remotely.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CMS-02 · Listerr One p.3
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -714,11 +676,8 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-blue-950">Offline USB Redundancy</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  If the outlet's internet drops, screens seamlessly switch to local pendrive loop with zero black screens or error messages.
+                  If the outlet&apos;s internet drops, screens seamlessly switch to local pendrive loop with zero black screens or error messages.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CMS-03 · Listerr One p.4
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -729,9 +688,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Real-time sync with restaurant POS systems. When an item sells out in the billing counter, it automatically strikes off the menu screen.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CMS-04 · 360 p.3
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -742,9 +698,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Back-of-house screens displaying incoming orders, preparation timers, and dispatch pass pacing for kitchen teams.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  CMS-06 · 360 p.3
-                </div>
               </div>
             </div>
           )}
@@ -823,7 +776,7 @@ export function HomePageV2Client() {
                 <div className="flex items-center gap-2 shrink-0">
                   <Link href="/hardware">
                     <Button variant="outline" className="border-blue-200 bg-white hover:bg-blue-50 text-blue-900 font-bold text-xs rounded-xl">
-                      Explore All 9 Hardware Models →
+                      Explore Hardware Catalog →
                     </Button>
                   </Link>
                   <Button
@@ -848,24 +801,18 @@ export function HomePageV2Client() {
                 </div>
                 <h4 className="text-lg font-bold text-blue-950">Cross-Platform Automation Rules</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  "If this, then that" store automation: if table occupancy exceeds 85%, trigger kitchen pacing alert and auto-push quick-prep dessert specials to digital menu boards.
+                  &quot;If this, then that&quot; store automation: if table occupancy exceeds 85%, trigger kitchen pacing alert and auto-push quick-prep dessert specials to digital menu boards.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  ADV-02 · Advanced Rules
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
                 <div className="h-10 w-10 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center font-bold">
                   <Bot className="h-5 w-5" />
                 </div>
-                <h4 className="text-lg font-bold text-blue-950">AI Voice Calling for Commerce</h4>
+                <h4 className="text-lg font-bold text-blue-950">AI Voice Calling for Commerce (Coming Soon)</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Autonomous conversational AI voice agent in Hindi/English for high-value order confirmations, delivery address verification, and VIP repeat bookings.
+                  Conversational AI voice agent in Hindi/English for high-value order confirmations, delivery address verification, and VIP repeat bookings.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  ADV-04 · Advanced Engine
-                </div>
               </div>
 
               <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-xs space-y-3">
@@ -876,9 +823,6 @@ export function HomePageV2Client() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Consolidated multi-outlet dashboard tracking footfall conversion rate, dwell times by aisle, kitchen safety compliance scores, and queue drop-offs.
                 </p>
-                <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 p-2 rounded-lg">
-                  ADV-03 · Vision Engine
-                </div>
               </div>
             </div>
           )}
@@ -890,13 +834,13 @@ export function HomePageV2Client() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-1">
-              Source Document Blueprints
+              Industry Solutions
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-fg tracking-tight">
               Pre-Configured for Your Industry
             </h2>
             <p className="text-sm text-fg-muted mt-2">
-              Deep blueprints lifted directly from the Listerr 360 Restaurant brochure and the Fashion Sellers deck.
+              Purpose-built commerce loops tailored for restaurants, fashion sellers, and retail businesses.
             </p>
           </div>
 
@@ -905,9 +849,8 @@ export function HomePageV2Client() {
             <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50/50 via-white to-white p-8 shadow-xs space-y-6">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-extrabold text-blue-700 bg-blue-100/90 px-3 py-1 rounded-full border border-blue-200">
-                  IND-01 · Listerr 360 Restaurant Solution
+                  Listerr 360 Restaurant Solution
                 </span>
-                <span className="text-xs text-slate-500 font-semibold">Source: A5 Brochure</span>
               </div>
 
               <div>
@@ -936,7 +879,7 @@ export function HomePageV2Client() {
                   </div>
                   <div className="text-xs">
                     <strong className="text-blue-950 block">Automated WhatsApp Re-engagement:</strong>
-                    Dining guests are automatically opted in. The system triggers birthday treats, weekday lunch specials, and weekend drop alerts.
+                    Dining guests can opt in at checkout. The system triggers birthday treats, weekday lunch specials, and weekend drop alerts.
                   </div>
                 </div>
 
@@ -963,14 +906,13 @@ export function HomePageV2Client() {
             <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50/50 via-white to-white p-8 shadow-xs space-y-6">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-extrabold text-blue-700 bg-blue-100/90 px-3 py-1 rounded-full border border-blue-200">
-                  IND-02 · Fashion & Cloth Sellers
+                  Fashion & Apparel Sellers
                 </span>
-                <span className="text-xs text-slate-500 font-semibold">Source: 16-Slide Deck</span>
               </div>
 
               <div>
                 <h3 className="text-2xl font-black text-blue-950 tracking-tight">
-                  For Apparel Brands, Boutiques & D2C Cloth Sellers
+                  For Apparel Brands, Boutiques & D2C Sellers
                 </h3>
                 <p className="text-xs text-slate-600 mt-1">
                   Turn Instagram scrollers into instant buyers with zero aggregator commissions.
@@ -1041,7 +983,7 @@ export function HomePageV2Client() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-black uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
-                    The One Software Plan (FND-04)
+                    Listerr 360 Software Plan
                   </span>
                   <span className="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-md">
                     0% Commission
@@ -1189,13 +1131,13 @@ export function HomePageV2Client() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 uppercase tracking-wider mb-2">
               <Play className="h-3.5 w-3.5 text-blue-600" />
-              Live In-Store Field Footage
+              Live Product Demos
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-blue-950 tracking-tight">
-              See Listerr Running in Real Indian Outlets
+              See How Listerr Works for Indian Businesses
             </h2>
             <p className="text-sm text-slate-600 mt-2">
-              From fast QSR counters and artisan cafes to multi-outlet cloud kitchen passes. Click any card to watch live footage.
+              Platform demos showing QSR counters, cafes, cloud kitchens, and more. Click any card to watch.
             </p>
           </div>
 
@@ -1342,27 +1284,27 @@ export function HomePageV2Client() {
 
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="rounded-2xl border border-blue-100 bg-white p-6 text-center shadow-xs">
-                <p className="text-3xl sm:text-4xl font-black text-blue-600">+58%</p>
+                <p className="text-3xl sm:text-4xl font-black text-blue-600">0%</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
-                  Diner Engagement
+                  Platform Commission
                 </p>
               </div>
               <div className="rounded-2xl border border-blue-100 bg-white p-6 text-center shadow-xs">
-                <p className="text-3xl sm:text-4xl font-black text-blue-600">2.3x</p>
+                <p className="text-3xl sm:text-4xl font-black text-blue-600">24–48h</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
-                  Checkout Conversion
+                  Go-Live Time
                 </p>
               </div>
               <div className="rounded-2xl border border-blue-100 bg-white p-6 text-center shadow-xs">
-                <p className="text-3xl sm:text-4xl font-black text-blue-600">4.1x</p>
+                <p className="text-3xl sm:text-4xl font-black text-blue-600">4</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
-                  Repeat Order Rate
+                  Connected Pillars
                 </p>
               </div>
               <div className="rounded-2xl border border-blue-100 bg-white p-6 text-center shadow-xs">
-                <p className="text-3xl sm:text-4xl font-black text-blue-600">₹50Cr+</p>
+                <p className="text-3xl sm:text-4xl font-black text-blue-600">Jaipur</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
-                  GMV Processed
+                  Support & Demo Center
                 </p>
               </div>
             </div>
@@ -1421,13 +1363,13 @@ export function HomePageV2Client() {
       <section className="py-16 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <span className="text-xs font-bold tracking-widest uppercase text-blue-300">
-            Deploy in Under 48 Hours
+            Go Live in 24–48 Hours
           </span>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
             Stop losing 30% margin. Start closing the commerce loop today.
           </h2>
           <p className="text-sm sm:text-base text-blue-100 max-w-2xl mx-auto">
-            Our onboarding team in Jaipur will set up your digital catalog, connect your POS, and configure your first WhatsApp campaign in 1 business day.
+            Our onboarding team in Jaipur will set up your digital catalog, connect your POS, and configure your first WhatsApp campaign — typically within 24–48 hours.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

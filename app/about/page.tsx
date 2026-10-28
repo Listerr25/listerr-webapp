@@ -2,19 +2,19 @@ import type { Metadata } from "next"
 import { HeartHandshake, MapPin, Rocket, Users } from "lucide-react"
 import { SimpleMarketingPage } from "@/components/marketing/simple-marketing-page"
 
-export const metadata: Metadata = { alternates: { canonical: "/about" }, title: "About Listerr", description: "Building India's Commerce Engagement OS.",
+export const metadata: Metadata = { alternates: { canonical: "/about" }, title: "About Listerr", description: "The Complete Commerce Operating Loop for Indian Businesses.",
   openGraph: {
     url: "/about",
     title: "About Listerr",
-    description: "Building India's Commerce Engagement OS.",
+    description: "The Complete Commerce Operating Loop for Indian Businesses.",
   },
   twitter: {
     card: "summary_large_image",
     title: "About Listerr",
-    description: "Building India's Commerce Engagement OS.",
+    description: "The Complete Commerce Operating Loop for Indian Businesses.",
   },
 }
 
 export default function Page() {
-  return <SimpleMarketingPage eyebrow="About" title="Building India's Commerce Engagement OS" description="Listerr helps Indian commerce teams turn owned surfaces into interactive, measurable, AI-powered growth loops." primaryCta={{label:"Join the Team",href:"/careers"}} secondaryCta={{label:"Contact Us",href:"/contact"}} features={[{title:"Mission",description:"Make commerce engagement interactive, measurable, and India-first.",icon:Rocket},{title:"India Focus",description:"INR, DPDP, regional languages, and India data residency.",icon:MapPin},{title:"Team",description:"Built for operators across growth, product, commerce, and content.",icon:Users},{title:"Partnerships",description:"Creators, agencies, publishers, and technology partners.",icon:HeartHandshake}]} checklist={["India-first commerce platform","Built around 4 products and 9 use cases","AI commerce layer","Partner network","Customer data ownership","Enterprise-grade compliance direction"]} metrics={[{value:"200+",label:"Brands target"},{value:"₹50Cr+",label:"GMV anchor"},{value:"2M+",label:"Story views"},{value:"2026",label:"Launch blueprint"}]} related={[{label:"Careers",href:"/careers"},{label:"Partners",href:"/partners"},{label:"Contact",href:"/contact"}]} />
+  return <SimpleMarketingPage eyebrow="About" title="The Complete Commerce Operating Loop for India" description="Listerr helps Indian restaurants, cafes, and retail businesses sell directly, retain customers via WhatsApp, and manage screens and cameras — all from one platform." primaryCta={{label:"Contact Us",href:"/contact"}} secondaryCta={{label:"Explore Hardware",href:"/hardware"}} features={[{title:"Mission",description:"Help Indian businesses sell direct, own their customer data, and automate store operations.",icon:Rocket},{title:"Based in Jaipur",description:"Orifinity Private Limited. Experience center in Malviya Nagar, Jaipur.",icon:MapPin},{title:"Team",description:"Founded by Rajat Jain and Naman Jain. Building for Indian commerce.",icon:Users},{title:"Partnerships",description:"POS integrations, payment gateways, and logistics partners.",icon:HeartHandshake}]} checklist={["India-first commerce platform","0% commission direct ordering","WhatsApp CRM and marketing","Cloud signage and digital menu boards","AI vision cameras for store ops","Petpooja POS integration"]} related={[{label:"Restaurants",href:"/industries/restaurants"},{label:"Hardware",href:"/hardware"},{label:"Contact",href:"/contact"}]} />
 }

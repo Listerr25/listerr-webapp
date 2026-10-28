@@ -15,8 +15,11 @@ import {
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Restaurants & Cafés · Listerr 360 Solution",
+  title: "Restaurants & Cafés Commerce Solution",
   description: "The complete restaurant operating system. Table QR ordering, Petpooja POS sync, WhatsApp re-engagement, and kitchen hygiene vision cameras.",
+  alternates: {
+    canonical: "/industries/restaurants",
+  },
 }
 
 export default function V2RestaurantIndustryPage() {
@@ -27,7 +30,7 @@ export default function V2RestaurantIndustryPage() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 mb-3 shadow-xs">
             <UtensilsCrossed className="h-3.5 w-3.5 text-blue-600" />
-            IND-01 · Listerr 360 Restaurant Blueprint (A5 Brochure)
+            Listerr 360 Restaurant Solution
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-blue-950 tracking-tight leading-tight">
             The Closed Loop for Restaurants, Cafés & QSR Counters.

@@ -91,7 +91,7 @@ export default function RefundPage() {
             <section id="monthly">
               <h2 className="text-2xl font-extrabold text-fg">4. Monthly Subscriptions</h2>
               <p className="mt-4 leading-8">
-                Fees for monthly subscription plans (Starter at ₹9,999/mo, Growth at ₹29,999/mo, and Scale at ₹79,999/mo) are non-refundable once the billing cycle has commenced. Specifically:
+                Fees for Listerr 360 monthly subscription plans (₹5,999/mo per store) are non-refundable once the billing cycle has commenced. Specifically:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
                 <li>No refund is issued for the current billing month, regardless of when within the month the cancellation is submitted.</li>
@@ -128,7 +128,7 @@ export default function RefundPage() {
                 If you believe you have been charged an incorrect amount, you must notify Listerr within 30 calendar days of the disputed charge. Requests submitted after this window may not be honoured.
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
-                <li>Email <strong>marketplace@listerr.in</strong> with the subject: <em>&quot;Billing Error — [Your Account Email]&quot;</em>.</li>
+                <li>Email <strong>support@listerr.in</strong> with the subject: <em>&quot;Billing Error — [Your Account Email]&quot;</em>.</li>
                 <li>Include: your account email, the disputed amount, charge date, invoice number (if available), and a brief description of the error.</li>
                 <li>Verified billing errors will be corrected and refunded in full within 7 business days of confirmation.</li>
                 <li>Refunds are credited to the original payment method used at the time of the transaction.</li>
@@ -152,7 +152,7 @@ export default function RefundPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
                 <li>Eligible customers may claim service credits as defined in the Order Form or SLA documentation.</li>
                 <li>Service credits are applied exclusively as a deduction against future invoices and cannot be redeemed as cash or transferred.</li>
-                <li>SLA credits are not available for Starter or Growth plan subscribers unless expressly agreed in writing.</li>
+                <li>SLA credits are not available unless expressly agreed in writing under an Enterprise Order Form.</li>
               </ul>
             </section>
             <section id="taxes">
@@ -177,7 +177,7 @@ export default function RefundPage() {
             <section id="how-to-request">
               <h2 className="text-2xl font-extrabold text-fg">12. How to Request a Refund</h2>
               <p className="mt-4 leading-8">
-                To submit a refund request, email <strong>marketplace@listerr.in</strong> with the subject line: <em>&quot;Refund Request — [Your Account Email]&quot;</em>. Your request must include:
+                To submit a refund request, email <strong>support@listerr.in</strong> with the subject line: <em>&quot;Refund Request — [Your Account Email]&quot;</em>. Your request must include:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
                 <li>Full name and registered account email address.</li>
@@ -201,7 +201,7 @@ export default function RefundPage() {
                 For refund requests or queries related to this policy, contact:
               </p>
               <p className="mt-4 leading-8">
-                <strong>Email:</strong> <a href="mailto:marketplace@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">marketplace@listerr.in</a><br />
+                <strong>Email:</strong> <a href="mailto:support@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">support@listerr.in</a><br />
                 <strong>Orifinity Private Limited</strong><br />
                 <strong>Headquarter:</strong> Shop No. 2, Opp. Old PNB Bank, Phulera, Dist. Jaipur – 303338, Rajasthan.<br />
                 <strong>Corporate Office:</strong> Tilak Tower, 1st Floor, Sector 101, Madhyam Marg, Mansarovar, Jaipur, Rajasthan – 302020.

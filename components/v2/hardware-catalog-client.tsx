@@ -55,7 +55,7 @@ export function HardwareCatalogClient() {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 mb-3 shadow-xs">
             <Cpu className="h-3.5 w-3.5 text-blue-600" />
-            04 · Listerr One Commercial Hardware (IOT-01 to IOT-08)
+            04 · Listerr One Commercial Hardware
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-blue-950 tracking-tight leading-tight">
             Commercial Displays, Touch Kiosks & Video Walls
@@ -168,7 +168,7 @@ export function HardwareCatalogClient() {
               <PackageCheck className="h-8 w-8 text-blue-700 shrink-0" />
               <div>
                 <h3 className="text-2xl font-black text-blue-950">
-                  What&apos;s Included With Every Listerr One Screen (IOT-04)
+                  What&apos;s Included With Every Listerr One Screen
                 </h3>
                 <p className="text-xs text-blue-800 mt-0.5">
                   Complete plug-and-play package with zero hidden mounting accessory costs.
@@ -217,7 +217,7 @@ export function HardwareCatalogClient() {
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 mb-1">
                 <Camera className="h-3.5 w-3.5" />
-                Vision AI Camera Hardware Series (IOT-06)
+                Vision AI Camera Hardware Series
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-tight">
                 Edge AI Neural Cameras for Footfall, Queues & Hygiene
@@ -226,9 +226,6 @@ export function HardwareCatalogClient() {
                 DPDP Act (India) compliant on-device processing. Light counts and safety alerts leave the outlet; video footage never uploads to external clouds.
               </p>
             </div>
-            <span className="text-xs text-slate-500 font-semibold shrink-0">
-              Source: Listerr 360 p.4
-            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -158,8 +158,8 @@ export default function TermsPage() {
               <h2 className="text-2xl font-extrabold text-fg">Dispute resolution</h2>
               <p className="mt-4 leading-8">
                 The parties will first attempt good-faith resolution. Unresolved
-                disputes will be subject to courts located in Bengaluru,
-                Karnataka, India, unless a signed agreement specifies otherwise.
+                disputes will be subject to courts located in Jaipur,
+                Rajasthan, India, unless a signed agreement specifies otherwise.
               </p>
             </section>
             <section id="contact" className="rounded-xl border border-border bg-surface-raised p-6">

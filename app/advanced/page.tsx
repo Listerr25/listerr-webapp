@@ -12,14 +12,16 @@ import {
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Advanced AI Engine · Listerr 360",
-  description: "Cross-platform automation rules, Vision AI analytics engine, conversational AI voice calling, and store robotics.",
+  title: "Store Automation & Vision AI Engine",
+  description: "Cross-platform automation rules, Vision AI analytics engine, and smart store integrations.",
+  alternates: {
+    canonical: "/advanced",
+  },
 }
 
 const ADVANCED_FEATURES = [
   {
     id: "automation",
-    code: "ADV-02",
     title: "Store Automation Rules Engine (If-This-Then-That)",
     desc: "Connect your physical store with digital actions: if camera queue count exceeds 5 people, trigger an alert to counter staff and auto-display 'Express Self-Order' QR on lobby screens.",
     accent: "bg-blue-50 text-blue-700",
@@ -27,7 +29,6 @@ const ADVANCED_FEATURES = [
   },
   {
     id: "analytics-engine",
-    code: "ADV-03",
     title: "Listerr AI Analytics & Vision Engine",
     desc: "Multi-branch intelligence dashboard consolidating camera footfall counts, table turnover pacing, WhatsApp repeat rates, and menu item profit margins.",
     accent: "bg-blue-50 text-blue-700",
@@ -35,17 +36,15 @@ const ADVANCED_FEATURES = [
   },
   {
     id: "ai-calling",
-    code: "ADV-04",
-    title: "Autonomous AI Voice Calling",
-    desc: "Conversational voice agent calling high-value buyers in Hindi or English for VIP order confirmations, address verifications, and dining table reservations.",
+    title: "Conversational Order & Reservation Assistant",
+    desc: "AI conversational assistant for order confirmations, delivery address checks, and automated WhatsApp dining table booking coordination.",
     accent: "bg-blue-50 text-blue-700",
     icon: PhoneCall,
   },
   {
-    id: "robotics",
-    code: "ADV-05",
-    title: "Robotics & Smart Store Automation",
-    desc: "Hardware API hooks for smart kiosks, electronic shelf labels (ESL), and automated order pickup locker integration.",
+    id: "smart-hardware",
+    title: "Smart Hardware & Kiosk Integrations",
+    desc: "Hardware API hooks for touch self-ordering kiosks, electronic token display screens, and thermal billing printer sync.",
     accent: "bg-blue-50 text-blue-700",
     icon: Bot,
   },
@@ -59,13 +58,13 @@ export default function V2AdvancedPage() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-700 mb-3 shadow-xs">
             <Bot className="h-3.5 w-3.5 text-blue-600" />
-            Advanced Layer (ADV-01 to ADV-05)
+            Store Automation & AI Engine
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-blue-950 tracking-tight leading-tight">
-            Autonomous Rules, Vision AI & Voice Calling.
+            Autonomous Rules, Vision AI & Smart Store Operations.
           </h1>
           <p className="text-base text-slate-600 mt-3 leading-relaxed">
-            The intelligent layer that glues the Listerr 360 loop together. Automate store reactions, analyze multi-outlet footfall, and engage buyers autonomously.
+            The intelligent layer that glues the Listerr 360 loop together. Automate store reactions, analyze multi-outlet footfall, and engage buyers seamlessly.
           </p>
         </div>
 
@@ -82,9 +81,6 @@ export default function V2AdvancedPage() {
                   <div className={`h-10 w-10 rounded-xl flex items-center justify-center font-bold ${item.accent} border border-blue-100`}>
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">
-                    {item.code}
-                  </span>
                 </div>
                 <h3 className="text-xl font-black text-blue-950">{item.title}</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>

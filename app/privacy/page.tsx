@@ -79,8 +79,9 @@ export default function PrivacyPage() {
             <section id="purposes">
               <h2 className="text-2xl font-extrabold text-fg">Purposes of processing</h2>
               <p className="mt-4 leading-8">
-                We process data to provide Listerr services, operate Stories,
-                Reels, Lists, AI Ordering and Smart Flows, support integrations,
+                We process data to provide Listerr 360 services, operate
+                direct ordering, WhatsApp CRM, signage CMS, and vision AI features,
+                support integrations,
                 process payments, improve reliability, prevent abuse, provide
                 support, and send service or marketing communications where
                 permitted.
@@ -146,12 +147,17 @@ export default function PrivacyPage() {
               </p>
             </section>
             <section id="contact" className="rounded-xl border border-border bg-surface-raised p-6">
-              <h2 className="text-2xl font-extrabold text-fg">Grievance Officer</h2>
+              <h2 className="text-2xl font-extrabold text-fg">Grievance Officer & DPDP Redressal</h2>
               <p className="mt-4 leading-8">
-                Grievance Officer, Orifinity Private Limited<br />
-                India HQ: Jaipur, Rajasthan, India<br />
-                Email: grievance@listerr.in
+                In accordance with the Information Technology Act 2000, the Digital Personal Data Protection Act (DPDP), and applicable rules:
               </p>
+              <div className="mt-3 space-y-1 text-sm leading-6">
+                <p><strong>Designated Grievance Officer:</strong> Legal & Compliance Team (Orifinity Private Limited)</p>
+                <p><strong>Registered Office:</strong> Shop No. 2, Opp. Old PNB Bank, Phulera, Jaipur, Rajasthan – 303338</p>
+                <p><strong>Operating Office:</strong> Malviya Nagar, Jaipur, Rajasthan – 302017</p>
+                <p><strong>Email:</strong> <a href="mailto:grievance@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">grievance@listerr.in</a></p>
+                <p><strong>Response & Resolution Window:</strong> Grievances will be acknowledged within 24 hours and addressed within 15 business days.</p>
+              </div>
             </section>
           </article>
         </div>

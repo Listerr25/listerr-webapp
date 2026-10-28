@@ -129,8 +129,8 @@ export function SiteFooter() {
           </div>
           <div className="text-xs text-fg-muted leading-5">
             <p className="font-bold text-fg text-[11px] uppercase tracking-wider mb-1">Email</p>
-            <a href="mailto:marketplace@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">
-              marketplace@listerr.in
+            <a href="mailto:support@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">
+              support@listerr.in
             </a>
           </div>
           <div className="text-xs text-fg-muted leading-5">

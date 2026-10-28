@@ -324,8 +324,8 @@ export function CameraProductDetail({ product }: { product: CameraProduct }) {
               variant="outline"
               className="w-full sm:w-auto rounded-xl border-white/40 bg-transparent text-white hover:bg-white/10 font-bold"
             >
-              <a href="mailto:marketplace@listerr.in" className="flex items-center justify-center gap-2">
-                <Mail className="h-4 w-4" /> Email: marketplace@listerr.in
+              <a href="mailto:support@listerr.in" className="flex items-center justify-center gap-2">
+                <Mail className="h-4 w-4" /> Email: support@listerr.in
               </a>
             </Button>
           </div>

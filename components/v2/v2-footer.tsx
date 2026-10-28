@@ -112,7 +112,7 @@ export function V2Footer() {
               <li><Link href="/industries/fashion" className="hover:text-white transition">Clothing & Fashion Sellers</Link></li>
               <li><Link href="/industries/retail" className="hover:text-white transition">Retail & D2C Brands</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition">Privacy Notice & DPDP</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition">Terms & Hardware Warranty</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition">Terms of Service</Link></li>
               <li><Link href="/refund" className="hover:text-white transition">Refund & Cancellation</Link></li>
             </ul>
           </div>
@@ -122,11 +122,11 @@ export function V2Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-slate-500">
           <div className="space-y-1">
             <p className="font-bold text-slate-400">
-              Orifinity Private Limited (Listerr)
+              Orifinity Private Limited (Listerr) · CIN: U74999RJ2018PTC060025
             </p>
             <p className="flex items-center gap-1.5 text-[11px]">
               <MapPin className="h-3.5 w-3.5 text-slate-400 shrink-0" />
-              Corporate & Hardware Experience Center: Malviya Nagar, Jaipur, Rajasthan 302017, India
+              Operating Office: Malviya Nagar, Jaipur, Rajasthan 302017 · Regd. Office: Phulera, Jaipur 303338, India
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-[11px]">

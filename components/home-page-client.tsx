@@ -85,7 +85,7 @@ const HERO_LISTERR_CARDS = [
     subtitle: "Stories, Reels & AI Flows",
     brand: "@listerr_live",
     tag: "Flagship Reel",
-    stat: "₹50Cr+ GMV",
+    stat: "Direct ROI",
     accent: "#3B82F6",
     badgeBg: "bg-blue-500",
     video: "https://cdn.listerr.network/media/Listerr%20website/listerrcover.mp4",
@@ -673,7 +673,7 @@ export default function HomePageClient() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 md:px-6 lg:grid-cols-4 lg:gap-8 lg:px-8">
           {[
             { value: "200+", label: "Brands Trust Us", sub: "Active D2C and Enterprise Stores" },
-            { value: "₹50Cr+", label: "Attributed GMV", sub: "Generated via stories & reels" },
+            { value: "0%", label: "Platform Commission", sub: "Keep 100% margin on direct orders" },
             { value: "2M+", label: "Story Views Served", sub: "Zero buffer CDN streaming" },
             { value: "12+", label: "Indian Languages", sub: "Hindi, Tamil, Telugu, Kannada & more" },
           ].map((m) => (
@@ -1303,7 +1303,7 @@ export default function HomePageClient() {
             Start converting browsers into loyal buyers today.
           </h2>
           <p className="mt-4 text-sm sm:text-base text-blue-100 max-w-xl mx-auto">
-            Join 200+ top Indian brands using Listerr to drive ₹50Cr+ in commerce. Setup takes less than 10 minutes.
+            Join Indian brands and merchants using Listerr to drive direct customer engagement and zero-commission orders. Setup takes less than 10 minutes.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">

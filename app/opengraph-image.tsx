@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "nodejs"
-export const alt = "Listerr — India's Most Complete Commerce Engagement Platform"
+export const alt = "Listerr 360 — The Complete Commerce Operating Loop for India"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -17,7 +17,7 @@ export default function Image() {
           justifyContent: "space-between",
           padding: "80px",
           background:
-            "linear-gradient(135deg, #1a0b3d 0%, #4f1d96 45%, #d63384 100%)",
+            "linear-gradient(135deg, #0c1a3d 0%, #1e3a8a 45%, #2563eb 100%)",
           color: "white",
           fontFamily: "sans-serif",
         }}
@@ -29,7 +29,7 @@ export default function Image() {
               height: 56,
               borderRadius: 12,
               background: "white",
-              color: "#4f1d96",
+              color: "#1e3a8a",
               fontWeight: 800,
               fontSize: 36,
               display: "flex",
@@ -39,7 +39,7 @@ export default function Image() {
           >
             L
           </div>
-          <div style={{ fontSize: 32, fontWeight: 700 }}>Listerr</div>
+          <div style={{ fontSize: 32, fontWeight: 700 }}>Listerr 360</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -51,10 +51,10 @@ export default function Image() {
               letterSpacing: "-0.02em",
             }}
           >
-            India's Most Complete Commerce Engagement Platform
+            The Complete Commerce Operating Loop for India
           </div>
           <div style={{ fontSize: 30, opacity: 0.85, lineHeight: 1.3 }}>
-            Stories · Reels · AI Ordering · Smart Flows
+            Orders In · Customers Back · Screens Update · Cameras Watch
           </div>
         </div>
 

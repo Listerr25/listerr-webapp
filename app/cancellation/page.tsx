@@ -80,7 +80,7 @@ export default function CancellationPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
                 <li>Via the Seller Studio dashboard: <strong>Account &gt; Subscription &gt; Cancel Subscription</strong>.</li>
-                <li>By emailing <strong>marketplace@listerr.in</strong> with the subject line: <em>&quot;Subscription Cancellation Request — [Your Account Email]&quot;</em>.</li>
+                <li>By emailing <strong>support@listerr.in</strong> with the subject line: <em>&quot;Subscription Cancellation Request — [Your Account Email]&quot;</em>.</li>
               </ul>
               <p className="mt-4 leading-8">
                 Cancellations are effective at the end of the then-current billing cycle. Access to the platform continues until that date. No further charges are made after cancellation is confirmed.
@@ -89,7 +89,7 @@ export default function CancellationPage() {
             <section id="monthly">
               <h2 className="text-2xl font-extrabold text-fg">3. Monthly Subscriptions</h2>
               <p className="mt-4 leading-8">
-                Monthly plans (Starter, Growth, or Scale) may be cancelled at any time. Upon cancellation:
+                Monthly subscription plans (Listerr 360 at ₹5,999/mo per store) may be cancelled at any time. Upon cancellation:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-8">
                 <li>Access to the plan continues until the last day of the current billing month.</li>
@@ -161,7 +161,7 @@ export default function CancellationPage() {
                 For cancellation requests, questions, or assistance, contact:
               </p>
               <p className="mt-4 leading-8">
-                <strong>Email:</strong> <a href="mailto:marketplace@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">marketplace@listerr.in</a><br />
+                <strong>Email:</strong> <a href="mailto:support@listerr.in" className="text-brand-listerr-700 font-bold hover:underline">support@listerr.in</a><br />
                 <strong>Orifinity Private Limited</strong><br />
                 <strong>Headquarter:</strong> Shop No. 2, Opp. Old PNB Bank, Phulera, Dist. Jaipur – 303338, Rajasthan.<br />
                 <strong>Corporate Office:</strong> Tilak Tower, 1st Floor, Sector 101, Madhyam Marg, Mansarovar, Jaipur, Rajasthan – 302020.
